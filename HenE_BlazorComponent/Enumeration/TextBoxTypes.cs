@@ -1,0 +1,27 @@
+﻿// <copyright file="TextBoxTypes.cs" company="PlaceholderCompany">
+// Copyright (c) PlaceholderCompany. All rights reserved.
+// </copyright>
+
+namespace HenE_BlazorComponent.Pages
+{
+    /// <summary>
+    /// Hier onder staat de type van de text box.
+    /// </summary>
+    public enum TextBoxTypes
+    {
+        /// <summary>
+        /// De text type van de text box.
+        /// </summary>
+        Text,
+
+        /// <summary>
+        /// De email type van de text box.
+        /// </summary>
+        Email,
+
+        /// <summary>
+        /// De password type van de text box.
+        /// </summary>
+        Password,
+    }
+}

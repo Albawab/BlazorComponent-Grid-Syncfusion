@@ -1,0 +1,47 @@
+﻿@page "/bootstrap"
+<h3 class="text-danger">Bootstrap</h3>
+
+<section class="container-fluid">
+    <div class="row">
+        <label class="col-2">Naam:</label>
+        <div class="col-8 offset-2">
+            <EjsInPlaceEditor Value="@Naam"></EjsInPlaceEditor>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <EjsCheckBox CssClass="offset-4" Label="Zou je deze box checken?"></EjsCheckBox>
+    </div>
+    <br />
+    <div class="row">
+        <label class="col-1">Start:</label>
+            <EjsDateTimePicker CssClass="col-2" Value="StartTime"></EjsDateTimePicker>
+        <label class="col-1 offset-md-2">End:</label>
+            <EjsDateTimePicker CssClass="col-2" Value="EndTime"></EjsDateTimePicker>
+    </div>
+    <br />
+    <div>Toelichting </div>
+    <br />
+    <div class="row">
+        <EjsTextBox Value="Text" FloatLabelType="@FloatLabelType.Auto" Multiline="true" ></EjsTextBox>
+    </div>
+    <div>
+        <EjsRichTextEditor></EjsRichTextEditor>
+    </div>
+</section>
+
+@code{
+    [Inject]
+    protected IJSRuntime JsRuntime {get;set;}
+    public string Naam{ get; set; }
+    public DateTime  StartTime{ get; set; }
+    public DateTime  EndTime{ get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        this.JsRuntime.Ejs().LoadLocaleData("wwwroot/ej2-locale/src/nl.json").SetCulture("nl").LoadCldrData(new string[] { "wwwroot/cldr-data/main/nl/ca-gregorian.json", "wwwroot/cldr-data/main/nl/timeZoneNames.json", "wwwroot/cldr-data/main/nl/numbers.json" });
+        // this.JsRuntime.Ejs().LoadLocaleData("wwwroot/ej2-locale/src/ar.json").SetCulture("ar").LoadCldrData(new string[] { "wwwroot/cldr-data/main/ar/ca-gregorian.json", "wwwroot/cldr-data/main/ar/timeZoneNames.json", "wwwroot/cldr-data/main/ar/numbers.json" });
+    }
+
+
+}
