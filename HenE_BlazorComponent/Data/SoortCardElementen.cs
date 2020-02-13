@@ -10,6 +10,11 @@ namespace HenE_BlazorComponent.Data
     public enum SoortCardElementen
     {
         /// <summary>
+        /// Checkbox antwoord.
+        /// </summary>
+        Checkbox,
+
+        /// <summary>
         /// Text element.
         /// </summary>
         Text,
@@ -38,5 +43,10 @@ namespace HenE_BlazorComponent.Data
         /// Een soort van Chart.
         /// </summary>
         Chart,
+
+        /// <summary>
+        /// Nummer soort.
+        /// </summary>
+        Nummer,
     }
 }

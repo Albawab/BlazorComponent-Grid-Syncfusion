@@ -1,0 +1,11 @@
+﻿@using HenE_BlazorComponent.Data.Formulier
+
+    <label class="col-@AntwoordElement.Columns offset-@AntwoordElement.Column">
+        <EjsTextBox Type="text"></EjsTextBox>
+
+    </label>
+
+@code {
+    [Parameter]
+    public FormulierAntwoord AntwoordElement { get; set; }
+}

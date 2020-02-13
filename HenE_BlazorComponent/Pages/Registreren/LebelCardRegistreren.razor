@@ -1,0 +1,34 @@
+﻿@using  HenE_BlazorComponent.Enumeration
+<span class="d-flex @Bold @VAlign  @HAlign col-@CardLabelElement.Columns offset-@CardLabelElement.Column">
+    <label>
+        @CardLabelElement.Title
+    </label>
+</span>
+@code {
+    [Parameter]
+    public CardLabelElement CardLabelElement { get; set; }
+
+    public string Bold
+    {
+        get
+        {
+            return CardLabelElement.Type == Enumeration.CardLabelSoorten.Nadruk ? "font-weight-bold" : "";
+        }
+    }
+
+    public string VAlign
+    {
+        get
+        {
+            return $"justify-content-{CardLabelElement.VerticalAlign.ToBootstrap()}";
+        }
+    }
+    public string HAlign
+    {
+        get
+        {
+            return $"align-items-{CardLabelElement.HorizontalAlign.ToBootstrap()}";
+        }
+    }
+
+}

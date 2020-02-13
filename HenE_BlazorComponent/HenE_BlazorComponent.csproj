@@ -6,8 +6,13 @@
 
   <ItemGroup>
     <PackageReference Include="bootstrap" Version="4.4.1" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Syncfusion.EJ2.Blazor" Version="17.4.0.49" />
     <PackageReference Include="Syncfusion.EJ2.WordEditor.Blazor" Version="17.4.0.49" />
+    <PackageReference Include="Syncfusion.Xamarin.Core" Version="17.4.0.49" />
   </ItemGroup>
 
 </Project>

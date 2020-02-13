@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-
 namespace HenE_BlazorComponent.Data
 {
+    using System;
+
     public class CardChartDateElement
     {
         /// <summary>
@@ -22,6 +22,5 @@ namespace HenE_BlazorComponent.Data
         /// Gets or sets Y waarde/ Data.
         /// </summary>
         public double YValueData1 { get; set; }
-
     }
 }

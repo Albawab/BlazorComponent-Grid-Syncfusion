@@ -2,11 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System.ComponentModel.DataAnnotations;
-using HenE_BlazorComponent.Pages;
-
 namespace HenE_BlazorComponent.Data
 {
+    using System.ComponentModel.DataAnnotations;
+    using HenE_BlazorComponent.Pages;
+
     /// <summary>
     /// De text card.
     /// </summary>
@@ -30,7 +30,7 @@ namespace HenE_BlazorComponent.Data
         /// <summary>
         /// Gets or sets de maxlenght van de textbox.
         /// </summary>
-        [Range(1, 20, ErrorMessage = "De maximaal lengte mag niet meer dan 20 letter zijn.")]
+        [Range(1, 40, ErrorMessage = "De maximaal lengte mag niet meer dan 40 letter zijn.")]
         public int MaxLength { get; set; }
     }
 }

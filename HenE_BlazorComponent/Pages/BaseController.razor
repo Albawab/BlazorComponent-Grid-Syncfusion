@@ -3,7 +3,7 @@
 @using HenE_BlazorComponent.Enumeration
 @using System.Threading;
 
-<div class="container">
+<div class="container-fluid">
     @foreach (var cardElements in CardElentsGrouping)
     {
         <div class="row">
@@ -34,6 +34,7 @@
         </div>
     }
 </div>
+
 
 @code{
     private List<CardElement> cardElements;
@@ -171,7 +172,10 @@
         cardElementsOrderBy = cardElements.OrderBy(O => O.Row).ToList();
 
         CardElentsGrouping = cardElementsOrderBy.GroupBy(G => G.Row);
+
+
     }
+
 
     private void ChangeValue()
     {
@@ -182,6 +186,6 @@
         cardElementsOrderBy = cardElements.OrderBy(O => O.Row).ToList();
         CardElentsGrouping = cardElementsOrderBy.GroupBy(G => G.Row);
 
-
     }
+
 }

@@ -2,12 +2,12 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-
 namespace HenE_BlazorComponent.Data
 {
+    using System;
+    using System.Linq;
+    using System.Threading.Tasks;
+
     public class WeatherForecastService
     {
         private static readonly string[] Summaries = new[]
@@ -15,6 +15,11 @@ namespace HenE_BlazorComponent.Data
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching",
         };
 
+        /// <summary>
+        ///
+        /// </summary>
+        /// <param name="startDate"></param>
+        /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
         public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
         {
             var rng = new Random();

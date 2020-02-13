@@ -1,0 +1,43 @@
+﻿@using HenE_BlazorComponent.Data.Formulier
+<section class="row">
+
+    @if (SectionKinderenGroup != null)
+    {
+            <label class="row col-@Section.Columns offset-@Section.Column">
+                <label class="border border-dark bg-dark text-light m-1 col-1" style="height:30px">@Section.Number</label>
+                <label class="border border-dark bg-dark text-light m-1 col-10" style="height:30px">@Section.Title</label>
+            </label>
+ 
+        @foreach (dynamic elementVraagenEnAntwoorden in SectionKinderenGroup)
+        {
+            <div class="row col-12 m-2">
+                @foreach (dynamic VraagEnAntwoord in elementVraagenEnAntwoorden)
+                {
+                    if (VraagEnAntwoord.GetType() == typeof(FormulierVraag))
+                    {
+                        <FormulierElementVraag ElementVraag=(FormulierVraag)VraagEnAntwoord></FormulierElementVraag>
+                    }
+                    else if (VraagEnAntwoord.GetType() == typeof(FormulierAntwoord))
+                    {
+                        <FormulierElementAntwoord formulierAntwoord="@VraagEnAntwoord"></FormulierElementAntwoord>
+                    }
+                }
+            </div>
+        }
+    }
+</section>
+
+@code {
+    [Parameter]
+    public FormulierSectie Section { get; set; }
+    dynamic SectionKinderenGroup;
+
+    protected override void OnInitialized()
+    {
+        if (Section.SectionKinderen != null)
+        {
+            SectionKinderenGroup = Section.SectionKinderen.GroupBy(G => G.Row);
+        }
+
+    }
+}

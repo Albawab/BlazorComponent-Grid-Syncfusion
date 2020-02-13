@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using HenE_BlazorComponent.Enumeration;
-
 namespace HenE_BlazorComponent.Data
 {
+    using HenE_BlazorComponent.Enumeration;
+
     /// <summary>
     /// De basecontroller van de card elementen.
     /// </summary>

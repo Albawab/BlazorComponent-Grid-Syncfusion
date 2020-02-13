@@ -24,8 +24,10 @@
     ".NETCoreApp,Version=v3.1": {
       "HenE_BlazorComponent/1.0.0": {
         "dependencies": {
+          "StyleCop.Analyzers": "1.1.118",
           "Syncfusion.EJ2.Blazor": "17.4.0.49",
           "Syncfusion.EJ2.WordEditor.Blazor": "17.4.0.49",
+          "Syncfusion.Xamarin.Core": "17.4.0.49",
           "bootstrap": "4.4.1",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
@@ -534,6 +536,7 @@
         }
       },
       "popper.js/1.16.0": {},
+      "StyleCop.Analyzers/1.1.118": {},
       "Syncfusion.Compression.Net.Core/17.4.0.49": {
         "dependencies": {
           "NETStandard.Library": "2.0.0"
@@ -642,6 +645,21 @@
           "lib/netstandard2.0/Syncfusion.OfficeChart.Portable.dll": {}
         }
       },
+      "Syncfusion.Xamarin.Core/17.4.0.49": {
+        "dependencies": {
+          "Syncfusion.Licensing": "17.4.0.49",
+          "Xamarin.Forms": "3.6.0.344457"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {
+            "assemblyVersion": "17.4451.0.49",
+            "fileVersion": "17.4451.0.49"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Syncfusion.Core.XForms.dll": {}
+        }
+      },
       "System.Buffers/4.5.0": {},
       "System.Reflection.Emit/4.7.0": {},
       "System.Text.Encoding.CodePages/4.4.0": {
@@ -650,6 +668,27 @@
         }
       },
       "System.Text.Encodings.Web/4.5.0": {},
+      "Xamarin.Forms/3.6.0.344457": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {},
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {},
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
         "compile": {
           "Microsoft.AspNetCore.Antiforgery.dll": {}
@@ -2480,6 +2519,13 @@
       "path": "popper.js/1.16.0",
       "hashPath": "popper.js.1.16.0.nupkg.sha512"
     },
+    "StyleCop.Analyzers/1.1.118": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+      "path": "stylecop.analyzers/1.1.118",
+      "hashPath": "stylecop.analyzers.1.1.118.nupkg.sha512"
+    },
     "Syncfusion.Compression.Net.Core/17.4.0.49": {
       "type": "package",
       "serviceable": true,
@@ -2529,6 +2575,13 @@
       "path": "syncfusion.officechart.net.core/17.4.0.49",
       "hashPath": "syncfusion.officechart.net.core.17.4.0.49.nupkg.sha512"
     },
+    "Syncfusion.Xamarin.Core/17.4.0.49": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5IPmQ6ffvuimZz0g9SFyhactZjhW5Rw8ZYtBkO23vdE4ClxTHWeeBqfbbOdckauNLDn3rbHXtPa4YSad+aPtrw==",
+      "path": "syncfusion.xamarin.core/17.4.0.49",
+      "hashPath": "syncfusion.xamarin.core.17.4.0.49.nupkg.sha512"
+    },
     "System.Buffers/4.5.0": {
       "type": "package",
       "serviceable": true,
@@ -2556,6 +2609,13 @@
       "sha512": "sha512-Xg4G4Indi4dqP1iuAiMSwpiWS54ZghzR644OtsRCm/m/lBMG8dUBhLVN7hLm8NNrNTR+iGbshCPTwrvxZPlm4g==",
       "path": "system.text.encodings.web/4.5.0",
       "hashPath": "system.text.encodings.web.4.5.0.nupkg.sha512"
+    },
+    "Xamarin.Forms/3.6.0.344457": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-7IffIKgL0fmgbfCLKzXaFKJ7uOueKiz/BIgmAG1Z5WMn+vMKeALe5GgRs3Uddo670VzllIHWkNEZD3lG+e02bw==",
+      "path": "xamarin.forms/3.6.0.344457",
+      "hashPath": "xamarin.forms.3.6.0.344457.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

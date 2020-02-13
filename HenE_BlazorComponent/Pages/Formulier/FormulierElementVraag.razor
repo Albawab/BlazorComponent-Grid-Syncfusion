@@ -1,0 +1,11 @@
+﻿@using HenE_BlazorComponent.Data.Formulier
+
+<label class="col-@ElementVraag.Columns offset-@ElementVraag.Column">
+    @ElementVraag.Text
+</label>
+
+@code {
+    [Parameter]
+    public FormulierVraag ElementVraag { get; set; }
+
+}

@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-
 namespace HenE_BlazorComponent.Data
 {
+    using System;
+
     /// <summary>
     /// De card date element.
     /// </summary>
@@ -24,7 +24,7 @@ namespace HenE_BlazorComponent.Data
         /// <summary>
         /// Gets or sets Start datum.
         /// </summary>
-        public DateTime MinDate { get; set; } 
+        public DateTime MinDate { get; set; }
 
         /// <summary>
         /// Gets or sets End datum.

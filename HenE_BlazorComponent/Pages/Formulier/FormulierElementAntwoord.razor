@@ -1,0 +1,22 @@
+﻿@using HenE_BlazorComponent.Data.Formulier
+
+@switch (formulierAntwoord.SoortAntwoord)
+{
+    case Data.Formulier.Enum.SoortAntwoord.Text:
+    <FormulierTextInputElement AntwoordElement="@formulierAntwoord"></FormulierTextInputElement>
+        break;
+    case Data.Formulier.Enum.SoortAntwoord.Nummer:
+        break;
+    case Data.Formulier.Enum.SoortAntwoord.Date:
+        break;
+    case Data.Formulier.Enum.SoortAntwoord.CheckBox:
+        break;
+    default:
+        break;
+}
+
+
+@code{
+    [Parameter]
+    public FormulierAntwoord formulierAntwoord{ get; set; }
+}

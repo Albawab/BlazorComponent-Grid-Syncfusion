@@ -23,5 +23,10 @@ namespace HenE_BlazorComponent.Pages
         /// De password type van de text box.
         /// </summary>
         Password,
+
+        /// <summary>
+        /// De telefoon nummer van een persoon.
+        /// </summary>
+        TelefoonNummer,
     }
 }

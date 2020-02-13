@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using HenE_BlazorComponent.Data;
-
 namespace HenE_BlazorComponent.Processes
 {
+    using HenE_BlazorComponent.Data;
+
     /// <summary>
     /// Zorg dat een nieuwe persoon wordt ingevoegd.
     /// </summary>

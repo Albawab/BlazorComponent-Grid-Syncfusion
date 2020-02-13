@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using System;
-
 namespace HenE_BlazorComponent.Data
 {
+    using System;
+
     public class WeatherForecast
     {
         public DateTime Date { get; set; }

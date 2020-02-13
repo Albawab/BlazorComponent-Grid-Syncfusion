@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-using HenE_BlazorComponent.Enumeration;
-
 namespace HenE_BlazorComponent.Data
 {
+    using HenE_BlazorComponent.Enumeration;
+
     /// <summary>
     /// De label element.
     /// </summary>
@@ -25,6 +25,5 @@ namespace HenE_BlazorComponent.Data
         /// Gets or sets de soort van een card.
         /// </summary>
         public CardLabelSoorten Type { get; set; } = CardLabelSoorten.Normaal;
-
     }
 }
