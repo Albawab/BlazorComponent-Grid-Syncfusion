@@ -23,12 +23,12 @@ namespace HenE_BlazorComponent.Data
         public string Naam { get; set; }
 
         /// <summary>
-        /// Gets or sets de achter naam van een persoon
+        /// Gets or sets de achter naam van een persoon.
         /// </summary>
         public string Achternaam { get; set; }
 
         /// <summary>
-        /// Gets or sets de email van een persoon
+        /// Gets or sets de email van een persoon.
         /// </summary>
         public string Email { get; set; }
 

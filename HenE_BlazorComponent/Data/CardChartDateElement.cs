@@ -6,6 +6,9 @@ namespace HenE_BlazorComponent.Data
 {
     using System;
 
+    /// <summary>
+    /// De char data.
+    /// </summary>
     public class CardChartDateElement
     {
         /// <summary>

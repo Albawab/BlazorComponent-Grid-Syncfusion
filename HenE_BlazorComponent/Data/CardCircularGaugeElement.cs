@@ -4,6 +4,9 @@
 
 namespace HenE_BlazorComponent.Data
 {
+    /// <summary>
+    /// de card circular gauge element.
+    /// </summary>
     public class CardCircularGaugeElement : CardElement
     {
         /// <summary>
@@ -19,6 +22,6 @@ namespace HenE_BlazorComponent.Data
         /// <summary>
         /// Gets or sets De value van de circular gauge.
         /// </summary>
-        public int value { get; set; }
+        public int Value { get; set; }
     }
 }

@@ -1,0 +1,47 @@
+﻿@page "/sidebar"
+<h3>Sidebar</h3>
+<EjsSidebar Width="250px">
+    <ChildContent>
+        <div style="text-align: center;" class="text-content"> Sidebar </div>
+    </ChildContent>
+</EjsSidebar>
+
+<br />
+<hr />
+<div>
+    <h2 style="color:red">Enable backdrop</h2>
+    <EjsSidebar @ref="sidebarObj" ShowBackdrop="true" Width="250px">
+        <ChildContent>
+            <div style="text-align: center;" class="text-content">
+                <span>Sidebar</span>
+                <span>
+                    <EjsButton @onclick="Close" CssClass="e-btn close-btn">Close Sidebar</EjsButton>
+                </span>
+            </div>
+        </ChildContent>
+    </EjsSidebar>
+</div>
+@code {
+
+        EjsSidebar sidebarObj;
+    public void Close()
+    {
+        this.sidebarObj.Hide();
+    }
+
+}
+<style>
+    .e-sidebar {
+        background-color: #f8f8f8;
+        color: black;
+    }
+
+    .text-content {
+        font-size: 1.5rem;
+        padding: 3rem;
+    }
+
+    .main > div {
+        padding: 0px !important;
+    }
+</style>

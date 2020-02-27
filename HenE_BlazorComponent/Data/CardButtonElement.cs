@@ -6,6 +6,9 @@ namespace HenE_BlazorComponent.Data
 {
     using HenE_BlazorComponent.Enumeration;
 
+    /// <summary>
+    /// De card butten element.
+    /// </summary>
     public class CardButtonElement : CardElement
     {
         /// <summary>

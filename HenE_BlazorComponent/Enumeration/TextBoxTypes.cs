@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace HenE_BlazorComponent.Pages
+namespace HenE_BlazorComponent.Enumeration
 {
     /// <summary>
     /// Hier onder staat de type van de text box.

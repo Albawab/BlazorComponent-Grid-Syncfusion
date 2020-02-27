@@ -4,6 +4,9 @@
 
 namespace HenE_BlazorComponent.Enumeration
 {
+    /// <summary>
+    /// Waar de effect van een button staat.
+    /// </summary>
     public enum ButtonAnimationEffect
     {
         /// <summary>

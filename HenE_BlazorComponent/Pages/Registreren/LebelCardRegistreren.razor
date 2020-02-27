@@ -1,5 +1,4 @@
-﻿@using  HenE_BlazorComponent.Enumeration
-<span class="d-flex @Bold @VAlign  @HAlign col-@CardLabelElement.Columns offset-@CardLabelElement.Column">
+﻿<span class="d-flex @Bold @VAlign  @HAlign col-@CardLabelElement.Columns offset-@CardLabelElement.Column">
     <label>
         @CardLabelElement.Title
     </label>
@@ -12,7 +11,7 @@
     {
         get
         {
-            return CardLabelElement.Type == Enumeration.CardLabelSoorten.Nadruk ? "font-weight-bold" : "";
+            return CardLabelElement.Type == CardLabelSoorten.Nadruk ? "font-weight-bold" : "";
         }
     }
 

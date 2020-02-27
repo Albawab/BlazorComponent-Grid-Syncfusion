@@ -7,12 +7,15 @@ namespace HenE_BlazorComponent.Data
     using System;
     using System.Collections.Generic;
 
+    /// <summary>
+    /// De chart element.
+    /// </summary>
     public class CardChartElement : CardElement
     {
         /// <summary>
         /// Gets or sets Data van de chart.
         /// </summary>
-        private List<CardChartDateElement> chartData = new List<CardChartDateElement>
+        public List<CardChartDateElement> ChartData { get; set; } = new List<CardChartDateElement>
         {
             new CardChartDateElement
             {
@@ -75,10 +78,5 @@ namespace HenE_BlazorComponent.Data
                 YValueData1 = 2,
             },
         };
-
-        /// <summary>
-        /// Gets or sets Data van de chart.
-        /// </summary>
-        public List<CardChartDateElement> ChartData { get => this.chartData; set => this.chartData = value; }
     }
 }

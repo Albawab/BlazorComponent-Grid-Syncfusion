@@ -1,10 +1,9 @@
-﻿// <copyright file="SectionBelastingFormulier.cs" company="PlaceholderCompany">
+﻿// <copyright file="FormulierAntwoord.cs" company="PlaceholderCompany">
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace HenE_BlazorComponent.Data.Formulier
+namespace HenE_BlazorComponent.Data
 {
-    using HenE_BlazorComponent.Data.Formulier.Enum;
     /// <summary>
     /// De eigenschappen van de antwoord.
     /// </summary>
@@ -14,5 +13,10 @@ namespace HenE_BlazorComponent.Data.Formulier
         /// Gets or sets de soort van een antwoord.
         /// </summary>
         public SoortAntwoord SoortAntwoord { get; set; }
+
+        /// <summary>
+        /// Gets or sets toelichting van een antwoord.
+        /// </summary>
+        public string AntwoordToelichting { get; set; }
     }
 }

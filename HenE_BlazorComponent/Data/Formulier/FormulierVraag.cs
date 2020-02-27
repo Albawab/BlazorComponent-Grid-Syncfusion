@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace HenE_BlazorComponent.Data.Formulier
+namespace HenE_BlazorComponent.Data
 {
     using System.Collections.Generic;
 

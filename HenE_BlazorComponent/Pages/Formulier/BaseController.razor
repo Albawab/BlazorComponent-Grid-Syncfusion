@@ -1,32 +1,39 @@
 ﻿@page "/formulier"
-@using HenE_BlazorComponent.Data.Formulier
-@using HenE_BlazorComponent.Data.Formulier.Belastingdienst
+@if (formulierElementenGroup != null)
+{
+    <div style="text-align:center">
+        <h1>@formulier.Titel</h1>
+    </div>
 
-<div style="text-align:center">
-    <h1>@aangifteDividendBelasting.Titel</h1>
-</div>
+    <div class="container-fluid">
+        @foreach (var formulierElenent in formulierElementenGroup)
+        {
+            <div>
+                @foreach (var element in formulierElenent)
+                {
+                    <FormulierElement Section=element GridData="GridData"></FormulierElement>
+                }
 
-<div class="container-fluid">
-    @foreach (var formulierElenent in formulierElementenGroup)
-    {
-        <div>
-            @foreach (var element in formulierElenent)
-            {
-                <FormulierElement Section=element></FormulierElement>
-            }
-
-        </div>
-    }
-</div>
-
+            </div>
+        }
+    </div>
+}
+else
+{
+    <h2>Loading...</h2>
+}
 
 @code {
-    AangifteDividendBelasting aangifteDividendBelasting = new AangifteDividendBelasting();
+
+    List<KinderFormulier> GridData = new List<KinderFormulier>();
+    Controller controller = new Controller();
+    Formulier formulier;
     dynamic formulierElementenGroup;
+
     protected override void OnInitialized()
     {
-        formulierElementenGroup = aangifteDividendBelasting.Kinderen.GroupBy(G => G.Row);
+        formulier = controller.GetData("aangifteSchenkbelasting");
+        formulierElementenGroup = formulier.Kinderen.GroupBy(G => G.Row).OrderBy(O => O.Key).ToArray();
+        StateHasChanged();
     }
-
-
 }

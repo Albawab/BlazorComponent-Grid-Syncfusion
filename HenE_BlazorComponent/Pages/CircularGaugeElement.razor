@@ -1,5 +1,4 @@
 ﻿@using HenE_BlazorComponent.Data
-@using HenE_BlazorComponent.Enumeration
 
     <label class="d-flex col-@CardCircularGaugeElement.Columns align-self-@CardCircularGaugeElement.HorizontalAlign.ToBootstrap() justify-content-@CardCircularGaugeElement.VerticalAlign.ToBootstrap()">
         <EjsCircularGauge>
@@ -16,7 +15,7 @@
                     <CircularGaugeAxisMinorTicks Width="0.01">
                     </CircularGaugeAxisMinorTicks>
                     <CircularGaugePointers>
-                        <CircularGaugePointer Value=@CardCircularGaugeElement.value Radius="60%" Color="#757575" PointerWidth="7" RoundedCornerRadius="6">
+                        <CircularGaugePointer Value=@CardCircularGaugeElement.Value Radius="60%" Color="#757575" PointerWidth="7" RoundedCornerRadius="6">
                             <CircularGaugeCap Radius="8" Color="#757575">
                                 <CircularGaugeCapBorder Width="0">
                                 </CircularGaugeCapBorder>

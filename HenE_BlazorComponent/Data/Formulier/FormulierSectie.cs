@@ -2,7 +2,7 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace HenE_BlazorComponent.Data.Formulier
+namespace HenE_BlazorComponent.Data
 {
     using System.Collections.Generic;
     using HenE_BlazorComponent.Enumeration;
@@ -25,7 +25,7 @@ namespace HenE_BlazorComponent.Data.Formulier
         /// <summary>
         /// Gets or sets de nummer van de section.
         /// </summary>
-        public int Number { get; set; }
+        public int SectionNumber { get; set; }
 
         /// <summary>
         /// Gets or sets toelichting van een section.

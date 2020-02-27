@@ -2,8 +2,11 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace HenE_BlazorComponent.Data.Formulier
+namespace HenE_BlazorComponent.Data
 {
+    /// <summary>
+    /// De gegevens van de formulier element.
+    /// </summary>
     public class FormulierElement
     {
         /// <summary>

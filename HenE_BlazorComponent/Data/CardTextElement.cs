@@ -5,7 +5,7 @@
 namespace HenE_BlazorComponent.Data
 {
     using System.ComponentModel.DataAnnotations;
-    using HenE_BlazorComponent.Pages;
+    using HenE_BlazorComponent.Enumeration;
 
     /// <summary>
     /// De text card.

@@ -8,6 +8,9 @@ namespace HenE_BlazorComponent.Data
     using System.Linq;
     using System.Threading.Tasks;
 
+    /// <summary>
+    /// Weather.
+    /// </summary>
     public class WeatherForecastService
     {
         private static readonly string[] Summaries = new[]
@@ -16,9 +19,9 @@ namespace HenE_BlazorComponent.Data
         };
 
         /// <summary>
-        ///
+        /// De gegevens die wordt gepasseerd.
         /// </summary>
-        /// <param name="startDate"></param>
+        /// <param name="startDate">Startdata.</param>
         /// <returns>A <see cref="Task{TResult}"/> representing the result of the asynchronous operation.</returns>
         public Task<WeatherForecast[]> GetForecastAsync(DateTime startDate)
         {

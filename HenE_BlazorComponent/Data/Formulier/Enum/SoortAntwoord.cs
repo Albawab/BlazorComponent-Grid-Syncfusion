@@ -2,10 +2,10 @@
 // Copyright (c) PlaceholderCompany. All rights reserved.
 // </copyright>
 
-namespace HenE_BlazorComponent.Data.Formulier.Enum
+namespace HenE_BlazorComponent.Data
 {
     /// <summary>
-    /// Een klas waar de soorte antwoord staan
+    /// Een klas waar de soorte antwoord staan.
     /// </summary>
     public enum SoortAntwoord
     {
@@ -28,5 +28,10 @@ namespace HenE_BlazorComponent.Data.Formulier.Enum
         /// Een soorte Checkbox.
         /// </summary>
         CheckBox,
+
+        /// <summary>
+        /// Een text area.
+        /// </summary>
+        Textarea,
     }
 }
