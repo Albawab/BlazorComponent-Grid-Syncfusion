@@ -63,7 +63,6 @@ namespace HenE_BlazorComponent.Data
                 },
                 },
             };
-
             formulierSectie.SectionKinderen = formulierElements;
             return formulierSectie;
         }

@@ -4,9 +4,9 @@
             <EjsGrid DataSource="@GridData" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" AllowPaging="true">
                 <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
                 <GridColumns>
-                    @foreach (var prop in typeof(KinderFormulier).GetProperties())
+                    @foreach (dynamic prop in typeElement.GetProperties())
                     {
-                        <GridColumn Field="@prop.Name"  AllowEditing="@prop.CanWrite"></GridColumn>
+                        <GridColumn Field="@prop.Name" AllowEditing="@prop.CanWrite"></GridColumn>
                     }
                 </GridColumns>
             </EjsGrid>
@@ -16,8 +16,12 @@
 
 @code {
     [Parameter]
-    public List<FormulierElement> Elementen { get; set; }
-
-        [Parameter]
-    public List<KinderFormulier> GridData { get; set; }
+    public FormulierSpecificatie Elementen { get; set; }
+    dynamic typeElement;
+    List<KinderFormulier> GridData = new List<KinderFormulier>();
+    protected override void OnInitialized()
+    {
+        typeElement = Elementen.Kinder.GetType();
+    }
 }
+

@@ -1,8 +1,37 @@
-﻿
+﻿@using System.Threading
 <label class="col-@Antwoord.Columns offset-@Antwoord.Column">
-    <EjsTextBox Value="" FloatLabelType="@FloatLabelType.Auto" Multiline="true"></EjsTextBox>
+    <EjsTextBox @bind-Value="@Value" FloatLabelType="@FloatLabelType.Auto" Multiline="true" @onfocusin="TimeStartTeOpslaan" @onfocusout="Opgeslagen"></EjsTextBox>
 </label>
+<h2>@Antwoord.AntwoordToelichting</h2>
 @code {
     [Parameter]
     public FormulierAntwoord Antwoord { get; set; }
+    private static Timer _timer;
+    public string Value { get; set; }
+
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+    }
+
+    public void TimeStartTeOpslaan()
+    {
+        _timer = new Timer(OpslaanData, null, 0, 5000);
+        /*        var timer = new System.Threading.Timer((args) =>
+                {
+                    Antwoord.AntwoordToelichting = Value;
+                }, null, 0, 1000);*/
+    }
+
+    public void Opgeslagen()
+    {
+        Antwoord.AntwoordToelichting = Value;
+        _timer.Dispose();
+    }
+
+    public void OpslaanData(Object o)
+    {
+        Antwoord.AntwoordToelichting = Value;
+    }
 }

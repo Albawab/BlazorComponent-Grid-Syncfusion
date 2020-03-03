@@ -88,6 +88,7 @@ namespace HenE_BlazorComponent.Data
                                                 new FormulierVraag { Row = 1, Column = 0, Columns = 1, Text = "AchterNaam", Antwoorden = new List<FormulierAntwoord> { new FormulierAntwoord { Row = 1, Column = 0, Columns = 1, SoortAntwoord = SoortAntwoord.Text }, }, },
                                                 new FormulierVraag { Row = 1, Column = 0, Columns = 1, Text = "Geboortedatum", Antwoorden = new List<FormulierAntwoord> { new FormulierAntwoord { Row = 1, Column = 0, Columns = 2, SoortAntwoord = SoortAntwoord.Date }, }, },
                                             },
+                    Kinder = new KinderFormulier(),
                 },
             };
 
@@ -217,10 +218,10 @@ namespace HenE_BlazorComponent.Data
             };
             List<FormulierElement> formulierVraagen = new List<FormulierElement>()
             {
-                new FormulierVraag { Row = 2, Column = 1, Columns = 1, Text = formulierSectie.SectionNumber.ToString() + "a" },
-                new FormulierVraag { Row = 2, Column = 0, Columns = 2, Text = "Op welke datum heeft uw vennootschap dividend beschikbaar gesteld?" },
-                new FormulierAntwoord { Row = 2, Column = 0, Columns = 2, SoortAntwoord = SoortAntwoord.Date },
-                new FormulierToelichting { Row = 2, Column = 2, Columns = 4, ToelichtingText = "Let op! Het gaat om de dag waarop het dividend besckikbaar is gesteld en niet om de dag waarop het dividend is uitbetaald." },
+                new FormulierVraag { Row = 1, Column = 1, Columns = 1, Text = formulierSectie.SectionNumber.ToString() + "a" },
+                new FormulierVraag { Row = 1, Column = 0, Columns = 2, Text = "Op welke datum heeft uw vennootschap dividend beschikbaar gesteld?" },
+                new FormulierAntwoord { Row = 1, Column = 0, Columns = 2, SoortAntwoord = SoortAntwoord.Date },
+                new FormulierToelichting { Row = 1, Column = 2, Columns = 4, ToelichtingText = "Let op! Het gaat om de dag waarop het dividend besckikbaar is gesteld en niet om de dag waarop het dividend is uitbetaald." },
 
                 new FormulierVraag { Row = 2, Column = 1, Columns = 1, Text = formulierSectie.SectionNumber.ToString() + "b" },
                 new FormulierVraag { Row = 2, Column = 0, Columns = 2, Text = "Over welk boekjaar heeft uw vennootschap dividend beschikbaar gesteld?" },
@@ -444,19 +445,19 @@ namespace HenE_BlazorComponent.Data
             {
                 new FormulierVraag { Row = 2, Column = 1, Columns = 1, Text = formulierSectie.SectionNumber.ToString() + "a" },
                 new FormulierVraag { Row = 2, Column = 0, Columns = 7, Text = "Dividendbelasting over inkoop van eigen aandelen door beursgenoteerde vennootschappen. Heeft de vennootschap eigen aandelen ingekocht? En blijkt dat aan het eind van het kalenderjaar dat in dat jaar niet isvoldaan aan devoorwaarden van devrijgestelde inkoop van aandelen volgens artikel 4c? Dan moet u alsnog dividendbelasting betalen." },
-                new FormulierToelichting { Row = 3, Column = 2, Columns = 1, ToelichtingText = "Bereken: opbrengst" },
+/*                new FormulierToelichting { Row = 3, Column = 2, Columns = 1, ToelichtingText = "Bereken: opbrengst" },
                 new FormulierAntwoord { Row = 3, Column = 0, Columns = 1, SoortAntwoord = SoortAntwoord.Nummer },
                 new FormulierToelichting { Row = 3, Column = 0, Columns = 1, ToelichtingText = "x (100/85) x 15% =" },
                 new FormulierAntwoord { Row = 3, Column = 0, Columns = 1, SoortAntwoord = SoortAntwoord.Nummer },
-                new FormulierAntwoord { Row = 3, Column = 2, Columns = 2, SoortAntwoord = SoortAntwoord.Nummer },
+                new FormulierAntwoord { Row = 3, Column = 2, Columns = 2, SoortAntwoord = SoortAntwoord.Nummer },*/
 
                 new FormulierVraag { Row = 4, Column = 1, Columns = 1, Text = formulierSectie.SectionNumber.ToString() + "b" },
                 new FormulierVraag { Row = 4, Column = 0, Columns = 6, Text = "Niet toepassen vrijstelling dividendbelasting: welk bedrag heeft de vennootschap ingehouden?" },
                 new FormulierAntwoord { Row = 4, Column = 0, Columns = 2, SoortAntwoord = SoortAntwoord.Nummer },
 
                 new FormulierVraag { Row = 13, Column = 1, Columns = 1, Text = formulierSectie.SectionNumber.ToString() + "c" },
-                new FormulierToelichting { Row = 5, Column = 2, Columns = 5, ToelichtingText = "Dividendbelasting bijzondere situaties" },
-                new FormulierAntwoord { Row = 5, Column = 1, Columns = 2, SoortAntwoord = SoortAntwoord.Nummer },
+/*                new FormulierToelichting { Row = 5, Column = 2, Columns = 5, ToelichtingText = "Dividendbelasting bijzondere situaties" },
+                new FormulierAntwoord { Row = 5, Column = 1, Columns = 2, SoortAntwoord = SoortAntwoord.Nummer },*/
                 new FormulierToelichting { Row = 7, Column = 2, Columns = 8, ToelichtingText = "Let op!Het omrekenen van nettobedragen naar brutobedragen (bruteren) is verplicht als de vennootschap de dividendbelasting voor eigen rekening neemt." },
             };
             formulierSectie.SectionKinderen = formulierVraagen;
@@ -602,8 +603,8 @@ namespace HenE_BlazorComponent.Data
                 new FormulierAntwoord { Row = 4, Column = 0, Columns = 6, SoortAntwoord = SoortAntwoord.Text },
                 new FormulierVraag { Row = 5, Column = 2, Columns = 2, Text = "Telefoon" },
                 new FormulierAntwoord { Row = 5, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text },
-                new FormulierVraag { Row = 5, Column = 2, Columns = 2, Text = "Handtekening" },
-                new FormulierAntwoord { Row = 5, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text },
+                new FormulierVraag { Row = 6, Column = 2, Columns = 2, Text = "Handtekening" },
+                new FormulierAntwoord { Row = 6, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text },
                 new FormulierToelichting { Row = 6, Column = 2, Columns = 4, ToelichtingText = "Zet op elke bijlage de naam en het RSIN/fiscaal nummer van de vennootschap." },
             };
 

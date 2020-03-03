@@ -26,5 +26,10 @@ namespace HenE_BlazorComponent.Data
         /// Gets or sets de emlementen van een specificatie.
         /// </summary>
         public List<FormulierElement> Elements { get; set; }
+
+        /// <summary>
+        /// Gets or sets een kind.
+        /// </summary>
+        public KinderFormulier Kinder { get; set; }
     }
 }

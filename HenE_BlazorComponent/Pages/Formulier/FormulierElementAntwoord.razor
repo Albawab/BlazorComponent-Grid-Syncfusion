@@ -2,7 +2,7 @@
 @switch (formulierAntwoord.SoortAntwoord)
 {
     case SoortAntwoord.Text:
-    <FormulierTextInputElement AntwoordElement="@formulierAntwoord"></FormulierTextInputElement>
+        <FormulierTextInputElement AntwoordElement="@formulierAntwoord"></FormulierTextInputElement>
         break;
     case SoortAntwoord.Nummer:
         <FormulierNummerInputElement Antwoord="formulierAntwoord"></FormulierNummerInputElement>
@@ -13,6 +13,9 @@
     case SoortAntwoord.CheckBox:
         <FormulierCheckBoxElement Antwoord="formulierAntwoord"></FormulierCheckBoxElement>
         break;
+    case SoortAntwoord.Textarea:
+        <FormulierInTextArea Antwoord="formulierAntwoord"></FormulierInTextArea>
+        break;
     default:
         break;
 }
@@ -20,5 +23,5 @@
 
 @code{
     [Parameter]
-    public FormulierAntwoord formulierAntwoord{ get; set; }
+    public FormulierAntwoord formulierAntwoord { get; set; }
 }

@@ -7,22 +7,22 @@
             <label class="border border-dark bg-dark text-light m-1 col-10" style="height:30px">@Section.Title</label>
         </label>
 
-        @foreach (dynamic elementVraagenEnAntwoorden in SectionKinderenGroup)
+        @foreach (dynamic elementGroup in SectionKinderenGroup)
         {
             <div class="row col-12 m-2">
-                @foreach (dynamic VraagEnAntwoord in elementVraagenEnAntwoorden)
+                @foreach (dynamic element in elementGroup)
                 {
-                    if (VraagEnAntwoord.GetType() == typeof(FormulierVraag))
+                    if (element.GetType() == typeof(FormulierVraag))
                     {
-                        <FormulierElementVraag ElementVraag=(FormulierVraag)VraagEnAntwoord></FormulierElementVraag>
+                        <FormulierElementVraag ElementVraag=(FormulierVraag)element></FormulierElementVraag>
                     }
-                    else if (VraagEnAntwoord.GetType() == typeof(FormulierAntwoord))
+                    else if (element.GetType() == typeof(FormulierAntwoord))
                     {
-                        <FormulierElementAntwoord formulierAntwoord="@VraagEnAntwoord"></FormulierElementAntwoord>
+                        <FormulierElementAntwoord formulierAntwoord="@element"></FormulierElementAntwoord>
                     }
-                    else if (VraagEnAntwoord.GetType() == typeof(FormulierSpecificatie))
+                    else if (element.GetType() == typeof(FormulierSpecificatie))
                     {
-                        <FormulierElementSpicifecatie Specificatie="@VraagEnAntwoord" GridData="GridData"></FormulierElementSpicifecatie>
+                        <FormulierElementSpicifecatie Specificatie="@element" ></FormulierElementSpicifecatie>
                     }
                 }
             </div>
@@ -33,8 +33,7 @@
 @code {
     [Parameter]
     public FormulierSectie Section { get; set; }
-    [Parameter]
-    public List<KinderFormulier> GridData { get; set; }
+
     dynamic SectionKinderenGroup;
 
     protected override void OnInitialized()

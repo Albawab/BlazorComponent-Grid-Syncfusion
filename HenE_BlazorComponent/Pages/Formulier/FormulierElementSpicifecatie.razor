@@ -5,7 +5,7 @@
         <GridGroote Specificatie=@Specificatie></GridGroote>
         break;
     case SpecificatieSoort.InlineEditing:
-         <InlineEditing GridData=GridData Elementen=Specificatie.Elements></InlineEditing>
+         <InlineEditing Elementen=Specificatie></InlineEditing>
         break;
     default:
         break;
@@ -13,7 +13,4 @@
 @code {
     [Parameter]
     public FormulierSpecificatie Specificatie { get; set; }
-
-    [Parameter]
-    public List<KinderFormulier> GridData { get; set; }
 }

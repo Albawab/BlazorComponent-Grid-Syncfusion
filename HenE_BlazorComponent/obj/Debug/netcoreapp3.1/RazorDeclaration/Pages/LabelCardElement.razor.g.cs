@@ -189,7 +189,7 @@ using HenE_BlazorComponent.Enumeration;
 #nullable disable
 #nullable restore
 #line 27 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
-using HenE_BlazorComponent.Controller;
+using HenE_BlazorComponent.Controllers;
 
 #line default
 #line hidden

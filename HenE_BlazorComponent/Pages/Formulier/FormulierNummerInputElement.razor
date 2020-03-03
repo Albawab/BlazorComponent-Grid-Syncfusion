@@ -1,7 +1,14 @@
 ﻿<label class="col-@Antwoord.Columns offset-@Antwoord.Column">
-    <EjsNumericTextBox TValue="double?" Format="c2" Value=100 Currency="ERO"></EjsNumericTextBox>
+    <EjsNumericTextBox TValue="double?" Format="€ ###.00" Value=100 Step="200"></EjsNumericTextBox>
 </label>
 @code {
     [Parameter]
     public FormulierAntwoord Antwoord { get; set; }
+        [Inject]
+    protected IJSRuntime JsRuntime { get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        this.JsRuntime.Ejs().LoadLocaleData("wwwroot/ej2-locale/src/nl.json").SetCulture("nl").LoadCldrData(new string[] { "wwwroot/cldr-data/main/nl/currencies.json", "wwwroot/cldr-data/main/nl/numbers.json" });
+    }
 }
