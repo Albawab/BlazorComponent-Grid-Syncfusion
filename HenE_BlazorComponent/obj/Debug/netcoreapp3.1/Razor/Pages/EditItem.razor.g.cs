@@ -60,133 +60,147 @@ using Microsoft.JSInterop;
 #nullable disable
 #nullable restore
 #line 8 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
-using HenE_BlazorComponent;
+using Microsoft.Extensions.Configuration;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
 #line 9 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+using HenE_BlazorComponent;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 10 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using HenE_BlazorComponent.Shared;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 11 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
-using Syncfusion.EJ2.Blazor;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 12 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 13 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.InPlaceEditor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 13 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
-using Syncfusion.EJ2.Blazor.Inputs;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 14 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
-using Syncfusion.EJ2.Blazor.Buttons;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 15 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 16 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.Calendars;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 16 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 17 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.RichTextEditor;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 17 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 18 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.SplitButtons;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 18 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 19 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.CircularGauge;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 19 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 20 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.Charts;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 20 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 21 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.Navigations;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 21 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 22 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.Schedule;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 22 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 23 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.Grids;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 23 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 24 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.Popups;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 24 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
-using Syncfusion.EJ2.Blazor.DropDowns;
-
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 25 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 26 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using Syncfusion.EJ2.Blazor.Data;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 26 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 27 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using HenE_BlazorComponent.Enumeration;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 27 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+#line 28 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
 using HenE_BlazorComponent.Controllers;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 30 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+using Syncfusion.EJ2.Blazor;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 31 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+using Syncfusion.EJ2.Blazor.Buttons;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 32 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+using Syncfusion.EJ2.Blazor.Notifications;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 33 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+using Syncfusion.EJ2.Blazor.DropDowns;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 34 "C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\_Imports.razor"
+using Syncfusion.EJ2.Blazor.Inputs;
 
 #line default
 #line hidden
