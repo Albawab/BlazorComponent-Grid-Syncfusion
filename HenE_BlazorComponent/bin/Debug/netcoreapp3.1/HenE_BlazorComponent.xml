@@ -813,6 +813,11 @@
             Eind op de cel.
             </summary>
         </member>
+        <member name="P:HenE_BlazorComponent.Interface.IHaveSetting.Oefenen">
+            <summary>
+            Gets or sets de instellingen voor de project.
+            </summary>
+        </member>
         <member name="T:HenE_BlazorComponent.Program">
             <summary>
             Main class.
@@ -830,6 +835,9 @@
             </summary>
             <param name="args">args.</param>
             <returns>Host builder.</returns>
+        </member>
+        <member name="P:HenE_BlazorComponent.Instellingen.Oefenen">
+            <inheritdoc/>
         </member>
         <member name="T:HenE_BlazorComponent.Startup">
             <summary>

@@ -5,6 +5,7 @@
 namespace HenE_BlazorComponent
 {
     using System.Net.Http;
+    using HenE_BlazorComponent.Interface;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.Extensions.Configuration;
@@ -12,6 +13,12 @@ namespace HenE_BlazorComponent
     using Microsoft.Extensions.Hosting;
     using Syncfusion.EJ2.Blazor;
     using static System.Net.WebRequestMethods;
+
+    public class Instellingen : IHaveSetting
+    {
+        /// <inheritdoc/>
+        public string Oefenen { get; set; }
+    }
 
     /// <summary>
     /// Startup.
@@ -39,10 +46,13 @@ namespace HenE_BlazorComponent
         /// <param name="services">services.</param>
         public void ConfigureServices(IServiceCollection services)
         {
+            IConfigurationSection sec = this.Configuration.GetSection("Oefenen");
             services.AddRazorPages();
             services.AddServerSideBlazor();
             services.AddSingleton<HttpClient>();
             services.AddSyncfusionBlazor();
+            services.Configure<IHaveSetting>(sec);
+            services.AddTransient<IHaveSetting, Instellingen>();..
         }
 
         /// <summary>
