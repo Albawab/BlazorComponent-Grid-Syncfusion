@@ -9,12 +9,11 @@ namespace Server.Controllers
     [ApiController]
     public class FormulierController : ControllerBase
     {
-        private AangifteDividendBelasting aangifteDividendBelasting = new AangifteDividendBelasting();
+        private readonly AangifteDividendBelasting aangifteDividendBelasting = new AangifteDividendBelasting();
         [HttpGet]
         public string GetData()
         {
             return JsonConvert.SerializeObject(aangifteDividendBelasting);
-                
         }
     }
 }

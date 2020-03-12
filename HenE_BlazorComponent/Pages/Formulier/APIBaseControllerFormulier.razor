@@ -3,8 +3,10 @@
 @using Newtonsoft.Json
 @if (APIformulierElementenGroup != null)
 {
+
     <div style="text-align:center">
         <h1>@formulier.Titel</h1>
+
     </div>
 
     <div class="container-fluid">
@@ -29,9 +31,10 @@ else
     <h2>Loading...</h2>
 }
 
+
 @code {
-        /* https://www.iot-now.com/iot-projects-fail/ 
-         https://www.iotworldtoday.com/webinar/smart-iot-solutions-for-manufacturing-and-energy-management/ */
+    /* https://www.iot-now.com/iot-projects-fail/
+     https://www.iotworldtoday.com/webinar/smart-iot-solutions-for-manufacturing-and-energy-management/ */
 
     List<KinderFormulier> GridData = new List<KinderFormulier>();
     Formulier formulier;

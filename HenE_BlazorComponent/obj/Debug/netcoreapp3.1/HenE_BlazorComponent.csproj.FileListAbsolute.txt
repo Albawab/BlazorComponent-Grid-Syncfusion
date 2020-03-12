@@ -299,3 +299,6 @@ C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorC
 C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\obj\Debug\netcoreapp3.1\Razor\Pages\Oefenen\Toast1.razor.g.cs
 C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Oefenen\Dialog.razor.g.cs
 C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\obj\Debug\netcoreapp3.1\Razor\Pages\Oefenen\Dialog.razor.g.cs
+C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\bin\Debug\netcoreapp3.1\stylecop1.json
+C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Formulier\Routing.razor.g.cs
+C:\Users\AbdulAbdulbawab\Desktop\Sharp\00 Blazor\04 BlazorComponent\HenE_BlazorComponent\obj\Debug\netcoreapp3.1\Razor\Pages\Formulier\Routing.razor.g.cs

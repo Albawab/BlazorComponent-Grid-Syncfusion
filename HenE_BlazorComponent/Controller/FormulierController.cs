@@ -18,11 +18,11 @@ namespace HenE_BlazorComponent.Controllers
         /// <summary>
         /// Geeft de juist formulier terug.
         /// </summary>
-        /// <param name="IdFormulier">Het formulier die aan wordt gevraagd.</param>
+        /// <param name="idFormulier">Het formulier die aan wordt gevraagd.</param>
         /// <returns>Het juist formulier.</returns>
-        public Formulier GetData(int IdFormulier)
+        public Formulier GetData(int idFormulier)
         {
-            return IdFormulier switch
+            return idFormulier switch
             {
                 1 => this.aangifteDividendBelasting,
                 2 => this.aangifteSchenkbelasting,

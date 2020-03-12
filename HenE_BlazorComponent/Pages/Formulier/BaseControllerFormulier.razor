@@ -1,7 +1,13 @@
-﻿@page "/baseControllerFormulier/{Id:int}"
-
+﻿@page "/"
+@using System.Web
+@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Hosting
+@using Microsoft.AspNetCore.Http.Extensions
+@using System.Threading;
+@inject NavigationManager NavigationManager
 @if (formulierElementenGroup != null)
 {
+
     <div style="text-align:center">
         <h1>@formulier.Titel</h1>
     </div>
@@ -26,12 +32,16 @@ else
 @code {
     FormulierController controller = new FormulierController();
     Formulier formulier;
-    dynamic formulierElementenGroup;
+
+    dynamic formulierElementenGroup { get; set; }
     [Parameter]
     public int Id { get; set; }
 
+
     protected override void OnInitialized()
     {
+
+        formulier = controller.GetData(1);
         switch (Id)
         {
             case 1:
@@ -46,9 +56,15 @@ else
         StateHasChanged();
     }
 
-        protected override void OnParametersSet()
-        {
-        OnInitialized();
-         StateHasChanged();
-        }
+    protected override void OnParametersSet()
+    {
+        /*        OnInitialized();
+                if (Id != 0)
+                {
+                    string url = NavigationManager.ToAbsoluteUri("#" + Id).ToString();
+                    NavigationManager.NavigateTo("#" + Id);
+                    StateHasChanged();
+                }*/https://chrissainty.com/fragment-routing-with-blazor/
+
     }
+}

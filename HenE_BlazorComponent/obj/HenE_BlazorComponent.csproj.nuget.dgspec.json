@@ -137,7 +137,7 @@
             },
             "Syncfusion.EJ2.Blazor": {
               "target": "Package",
-              "version": "[17.4.0.51, )"
+              "version": "[17.4.0.54, )"
             },
             "System.Text.Json": {
               "target": "Package",

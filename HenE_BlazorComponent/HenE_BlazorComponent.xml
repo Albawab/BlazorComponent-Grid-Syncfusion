@@ -14,7 +14,7 @@
             <summary>
             Geeft de juist formulier terug.
             </summary>
-            <param name="IdFormulier">Het formulier die aan wordt gevraagd.</param>
+            <param name="idFormulier">Het formulier die aan wordt gevraagd.</param>
             <returns>Het juist formulier.</returns>
         </member>
         <member name="T:HenE_BlazorComponent.Data.CardButtonElement">
@@ -813,10 +813,16 @@
             Eind op de cel.
             </summary>
         </member>
-        <member name="P:HenE_BlazorComponent.Interface.IHaveSetting.Oefenen">
+        <member name="T:HenE_BlazorComponent.Interface.IHaveSettings">
             <summary>
-            Gets or sets de instellingen voor de project.
+            Interface waarin de instellingen van de applicatie staan.
             </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Interface.IHaveSettings.GetInstellingen">
+            <summary>
+            Get de instellingen.
+            </summary>
+            <returns>De instellingen.</returns>
         </member>
         <member name="T:HenE_BlazorComponent.Program">
             <summary>
@@ -836,8 +842,48 @@
             <param name="args">args.</param>
             <returns>Host builder.</returns>
         </member>
-        <member name="P:HenE_BlazorComponent.Instellingen.Oefenen">
-            <inheritdoc/>
+        <member name="T:HenE_BlazorComponent.Setting.Instellingen">
+            <summary>
+            Hier staat de eigenschap van de instellingen.
+            </summary>
+        </member>
+        <member name="P:HenE_BlazorComponent.Setting.Instellingen.TimerTextAreaDataOpslaanMS">
+            <summary>
+            Gets or sets Timer van de functie.Die wordt aangeroept om de gegevens te opslaan.
+            </summary>
+        </member>
+        <member name="T:HenE_BlazorComponent.Setting.InstellingenDataBase">
+            <summary>
+            Haalt de gegevens van uit de database.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Setting.InstellingenDataBase.GetInstellingen">
+            <summary>
+            Geeft de data terug die uit de database gehaald.
+            </summary>
+            <returns>De nieuwe main instellingen.</returns>
+        </member>
+        <member name="T:HenE_BlazorComponent.Setting.InstellingenJSON">
+            <summary>
+            Deze klas haalt de data van de appsetting.json op.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Setting.InstellingenJSON.#ctor(Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HenE_BlazorComponent.Setting.InstellingenJSON"/> class.
+            </summary>
+            <param name="configuration">con.</param>
+        </member>
+        <member name="P:HenE_BlazorComponent.Setting.InstellingenJSON.Configuration">
+            <summary>
+            Gets de configuration.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Setting.InstellingenJSON.GetInstellingen">
+            <summary>
+            Geeft de data terug die uit de bestand appsetting.json gehaald.
+            </summary>
+            <returns>De data.</returns>
         </member>
         <member name="T:HenE_BlazorComponent.Startup">
             <summary>
@@ -868,6 +914,22 @@
             </summary>
             <param name="app">app.</param>
             <param name="env">env.</param>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.TimeStartTeOpslaan">
+            <summary>
+            Deze functie gaat de timer starten.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.Opgeslagen">
+            <summary>
+            Deze functie gaat de timer stoppen.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.OpslaanData(System.Object)">
+            <summary>
+            Deze functie slaat de data op.
+            </summary>
+            <param name="obj">.</param>
         </member>
     </members>
 </doc>
