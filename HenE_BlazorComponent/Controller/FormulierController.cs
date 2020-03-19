@@ -14,6 +14,7 @@ namespace HenE_BlazorComponent.Controllers
     {
         private readonly AangifteDividendBelasting aangifteDividendBelasting = new AangifteDividendBelasting();
         private readonly AangifteSchenkbelasting aangifteSchenkbelasting = new AangifteSchenkbelasting();
+        private readonly KennisgevingDouane kennisgevingDouane = new KennisgevingDouane();
 
         /// <summary>
         /// Geeft de juist formulier terug.
@@ -24,8 +25,9 @@ namespace HenE_BlazorComponent.Controllers
         {
             return idFormulier switch
             {
-                1 => this.aangifteDividendBelasting,
-                2 => this.aangifteSchenkbelasting,
+                0 => this.aangifteDividendBelasting,
+                1 => this.aangifteSchenkbelasting,
+                2 => this.kennisgevingDouane,
                 _ => null,
             };
         }

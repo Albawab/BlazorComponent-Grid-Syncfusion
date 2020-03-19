@@ -1,37 +1,37 @@
 ﻿@inject NavigationManager NavigationManager
-<div class="top-row pl-4 navbar navbar-dark">
-    <a class="navbar-brand" href="">HenE_BlazorComponent</a>
+<div class="top-row pl-4 navbar">
+    <a class="navbar-brand" href="">BlazorComponent</a>
     <button class="navbar-toggler" @onclick="ToggleNavMenu">
         <span class="navbar-toggler-icon"></span>
     </button>
 </div>
 
-<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+<div class="@NavMenuCssClass list-group collapse" @onclick="ToggleNavMenu">
+    <ol class="nav" style="overflow:visible">
+        <li class="nav-item">
+            <NavLink class="nav-link" @onclick="ToggleDataList" style="font-size:18px">
 
-    <ol class="nav flex-column list-group" style="overflow:visible">
-        <li class="nav-item px-3">
-            <NavLink class="nav-link" href="" @onclick="ToggleDataList">
-                <span aria-hidden="true"></span>Aangift DividendBelasting
+                <span aria-hidden="true"></span>@formulier.Titel
             </NavLink>
         </li>
-        @if (formulier != null)
+        @if (formulierElementenGroup != null)
         {
-            @foreach (FormulierElement section in formulier.Kinderen)
+            @foreach (var sections in formulierElementenGroup)
             {
-
-                <li class="custom active pl-3" style="font-size:medium " @onclick="(()=>GetHashTagName(section))">
-
-                    @if (section is FormulierSectie)
-                    {
-                        FormulierSectie sectie = (FormulierSectie)section;
-                        <NavLink class="text-light" href="@HashTagName">
-                            <hr />
-                            <span aria-hidden="true">
-                                -@(sectie.Title)
-                            </span>
-                        </NavLink>
-                    }
-                </li>
+                @foreach (FormulierSectie section in sections)
+                {
+                    <li class="custom active pl-3 border-bottom list-unstyled" style="font-size:medium" @onclick="@(()=>GetHashTagName(section))">
+                        @if (section is FormulierSectie)
+                        {
+                            FormulierSectie sectie = (FormulierSectie)section;
+                            <NavLink class="nav-link" href="@GetUrl(section)" Match="NavLinkMatch.All">
+                                <span class="text-light" aria-hidden="true" style="font-size:13px">
+                                    @(sectie.Title)
+                                </span>
+                            </NavLink>
+                        }
+                    </li>
+                }
             }
         }
     </ol>
@@ -124,12 +124,20 @@
 
 @code {
     private bool collapseNavMenu = true;
+    FormulierController controller = new FormulierController();
     Formulier formulier;
+    dynamic formulierElementenGroup { get; set; }
     public ExpandOnSettings Expand = ExpandOnSettings.Click;
-    string HashTagName = "0";
-    string absoluteUrl;
+    string HashTagName = "#0";
 
     private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+
+    protected override void OnInitialized()
+    {
+        FormulierController controller = new FormulierController();
+        formulier = controller.GetData(1);
+    }
+
 
     private void ToggleNavMenu()
     {
@@ -140,33 +148,45 @@
 
     private void ToggleDataList()
     {
-        if (formulier == null)
+        if (formulierElementenGroup == null)
         {
-            FormulierController controller = new FormulierController();
-            formulier = controller.GetData(1);
+
+            formulierElementenGroup = formulier.Kinderen.GroupBy(G => G.Row).OrderBy(O => O.Key).ToArray();
         }
         else
         {
-            formulier = null;
+            formulierElementenGroup = null;
         }
 
         StateHasChanged();
 
     }
 
-    private void GetHashTagName(FormulierElement item)
+    private void GetHashTagName(FormulierSectie item)
     {
         if (item is FormulierSectie)
         {
             FormulierSectie sectie = (FormulierSectie)item;
-            HashTagName = sectie.SectionNumber.ToString();
+            HashTagName = "#" + sectie.SectionNumber.ToString();
         }
         StateHasChanged();
+    }
+
+    private string GetUrl(FormulierSectie item)
+    {
+        if (item is FormulierSectie)
+        {
+            FormulierSectie sectie = (FormulierSectie)item;
+            HashTagName = "#" + sectie.SectionNumber.ToString();
+        }
+        return HashTagName;
     }
 }
 
 <style>
+
     .custom {
         width: 100%;
+        opacity:0.7;
     }
 </style>

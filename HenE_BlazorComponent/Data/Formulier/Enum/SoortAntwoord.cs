@@ -33,5 +33,15 @@ namespace HenE_BlazorComponent.Data
         /// Een text area.
         /// </summary>
         Textarea,
+
+        /// <summary>
+        /// Een Radio button.
+        /// </summary>
+        RadioButton,
+
+        /// <summary>
+        /// De tijd.
+        /// </summary>
+        Tijd,
     }
 }

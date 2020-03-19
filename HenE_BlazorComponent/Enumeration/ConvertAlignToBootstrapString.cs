@@ -16,17 +16,13 @@ namespace HenE_BlazorComponent.Enumeration
         /// <returns>De vertival aligan enum als string.</returns>
         public static string ToBootstrap(this VerticalAlign verticlaAlign)
         {
-            switch (verticlaAlign)
+            return verticlaAlign switch
             {
-                case VerticalAlign.Top:
-                    return "start";
-                case VerticalAlign.Center:
-                    return "center";
-                case VerticalAlign.Bottom:
-                    return "end";
-                default:
-                    return string.Empty;
-            }
+                VerticalAlign.Top => "start",
+                VerticalAlign.Center => "center",
+                VerticalAlign.Bottom => "end",
+                _ => string.Empty,
+            };
         }
 
         /// <summary>
@@ -36,17 +32,13 @@ namespace HenE_BlazorComponent.Enumeration
         /// <returns>De horizontal aligan enum als string.</returns>
         public static string ToBootstrap(this HorizontalAlign horizontal)
         {
-            switch (horizontal)
+            return horizontal switch
             {
-                case HorizontalAlign.Left:
-                    return "start";
-                case HorizontalAlign.Center:
-                    return "center";
-                case HorizontalAlign.Right:
-                    return "end";
-                default:
-                    return string.Empty;
-            }
+                HorizontalAlign.Left => "start",
+                HorizontalAlign.Center => "center",
+                HorizontalAlign.Right => "end",
+                _ => string.Empty,
+            };
         }
     }
 }

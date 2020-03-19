@@ -1,18 +1,15 @@
 ﻿@page "/"
-@using System.Web
-@using Microsoft.AspNetCore.Http;
-@using Microsoft.AspNetCore.Hosting
-@using Microsoft.AspNetCore.Http.Extensions
-@using System.Threading;
 @inject NavigationManager NavigationManager
-@if (formulierElementenGroup != null)
+@inherits BaseControllerFormulierBlazor
+
+@if (FormulierElementenGroup != null)
 {
 
     <div style="text-align:center">
-        <h1>@formulier.Titel</h1>
+        <h1>@EenFormulier.Titel</h1>
     </div>
     <div class="container-fluid">
-        @foreach (var formulierElenent in formulierElementenGroup)
+        @foreach (var formulierElenent in FormulierElementenGroup)
         {
             <div>
                 @foreach (var element in formulierElenent)
@@ -27,44 +24,4 @@
 else
 {
     <h2>Loading...</h2>
-}
-
-@code {
-    FormulierController controller = new FormulierController();
-    Formulier formulier;
-
-    dynamic formulierElementenGroup { get; set; }
-    [Parameter]
-    public int Id { get; set; }
-
-
-    protected override void OnInitialized()
-    {
-
-        formulier = controller.GetData(1);
-        switch (Id)
-        {
-            case 1:
-                formulier = controller.GetData(1);
-                break;
-            case 2:
-                formulier = controller.GetData(2);
-                break;
-        }
-
-        formulierElementenGroup = formulier.Kinderen.GroupBy(G => G.Row).OrderBy(O => O.Key).ToArray();
-        StateHasChanged();
-    }
-
-    protected override void OnParametersSet()
-    {
-        /*        OnInitialized();
-                if (Id != 0)
-                {
-                    string url = NavigationManager.ToAbsoluteUri("#" + Id).ToString();
-                    NavigationManager.NavigateTo("#" + Id);
-                    StateHasChanged();
-                }*/https://chrissainty.com/fragment-routing-with-blazor/
-
-    }
 }

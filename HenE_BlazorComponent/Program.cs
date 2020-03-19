@@ -10,7 +10,7 @@ namespace HenE_BlazorComponent
     /// <summary>
     /// Main class.
     /// </summary>
-    public class Program
+    public static class Program
     {
         /// <summary>
         /// Main function.

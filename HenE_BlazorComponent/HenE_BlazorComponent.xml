@@ -296,6 +296,52 @@
             Initializes a new instance of the <see cref="T:HenE_BlazorComponent.Data.AangifteSchenkbelasting"/> class.
             </summary>
         </member>
+        <member name="T:HenE_BlazorComponent.Data.KennisgevingDouane">
+            <summary>
+            De kennisgeving douane formulier.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Data.KennisgevingDouane.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HenE_BlazorComponent.Data.KennisgevingDouane"/> class.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Data.KennisgevingDouane.AddBedrijfsgegevens">
+            <summary>
+            Create een nieuwe sectie waar de elementen van het bedrijf staat.
+            </summary>
+            <returns>Nieuwe sectie.</returns>
+        </member>
+        <member name="M:HenE_BlazorComponent.Data.KennisgevingDouane.AddGegevensVergunning">
+            <summary>
+            Create een nieuwe sectie waar de elementen van het bedrijf staat.
+            </summary>
+            <returns>Nieuwe element.</returns>
+        </member>
+        <member name="M:HenE_BlazorComponent.Data.KennisgevingDouane.AddGegevensKennisgeving">
+            <summary>
+            Create een nieuwe sectie waar de elementen van het bedrijf staat.
+            </summary>
+            <returns>Nieuwe element.</returns>
+        </member>
+        <member name="M:HenE_BlazorComponent.Data.KennisgevingDouane.AddGegevensAangifteOfBewijsstuk">
+            <summary>
+            Create een nieuwe sectie waar de elementen van het bedrijf staat.
+            </summary>
+            <returns>Nieuwe element.</returns>
+        </member>
+        <member name="M:HenE_BlazorComponent.Data.KennisgevingDouane.AddRuimteVoorToelichting">
+            <summary>
+            Create een nieuwe sectie waar de elementen van het bedrijf staat.
+            </summary>
+            <returns>Nieuwe element.</returns>
+        </member>
+        <member name="M:HenE_BlazorComponent.Data.KennisgevingDouane.AddOndertekening">
+            <summary>
+            Create een nieuwe sectie waar de elementen van het bedrijf staat.
+            </summary>
+            <returns>Nieuwe sectie.</returns>
+        </member>
         <member name="T:HenE_BlazorComponent.Data.SoortAntwoord">
             <summary>
             Een klas waar de soorte antwoord staan.
@@ -324,6 +370,16 @@
         <member name="F:HenE_BlazorComponent.Data.SoortAntwoord.Textarea">
             <summary>
             Een text area.
+            </summary>
+        </member>
+        <member name="F:HenE_BlazorComponent.Data.SoortAntwoord.RadioButton">
+            <summary>
+            Een Radio button.
+            </summary>
+        </member>
+        <member name="F:HenE_BlazorComponent.Data.SoortAntwoord.Tijd">
+            <summary>
+            De tijd.
             </summary>
         </member>
         <member name="T:HenE_BlazorComponent.Data.Formulier">
@@ -813,6 +869,19 @@
             Eind op de cel.
             </summary>
         </member>
+        <member name="T:HenE_BlazorComponent.Extensions">
+            <summary>
+            Klas waar de Extensions functies staan.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Extensions.NavigateToFragmentAsync(Microsoft.AspNetCore.Components.NavigationManager,Microsoft.JSInterop.IJSRuntime)">
+            <summary>
+            zorg dat de scroller gaat naar een nieuwe deel van de pagina.
+            </summary>
+            <param name="navigationManager">De navigationManager.</param>
+            <param name="jSRuntime">De runtime van javascript.</param>
+            <returns>Een nieuwe runtime.</returns>
+        </member>
         <member name="T:HenE_BlazorComponent.Interface.IHaveSettings">
             <summary>
             Interface waarin de instellingen van de applicatie staan.
@@ -823,6 +892,76 @@
             Get de instellingen.
             </summary>
             <returns>De instellingen.</returns>
+        </member>
+        <member name="T:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor">
+            <summary>
+            Deze klas doet de data voor de blazor klaar.
+            </summary>
+        </member>
+        <member name="P:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.Id">
+            <summary>
+            Gets or sets De id from de slidebar.
+            </summary>
+        </member>
+        <member name="P:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.FormulierElementenGroup">
+            <summary>
+            Gets or sets formulier elementen.
+            </summary>
+        </member>
+        <member name="P:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.Controller">
+            <summary>
+            Gets controle.
+            </summary>
+        </member>
+        <member name="P:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.EenFormulier">
+            <summary>
+            Gets or sets een formulier.
+            </summary>
+        </member>
+        <member name="P:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.NavigationManager">
+            <summary>
+            Gets or sets navigation manager.
+            </summary>
+        </member>
+        <member name="P:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.JsRuntime">
+            <summary>
+            Gets or sets JsRunTime.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.OnInitialized">
+            <summary>
+            start wanneer de project start.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.OnAfterRenderAsync(System.Boolean)">
+            <summary>
+            als de webpage is klaar dan loopt deze functie.
+            </summary>
+            <param name="firstRender">Is het eerst renderen.</param>
+            <returns>Een Task waar de webpage wordt verandert.</returns>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.BaseControllerFormulierBlazor.TryFragmentNavigation(System.Object,Microsoft.AspNetCore.Components.Routing.LocationChangedEventArgs)">
+            <summary>
+            Probeer om naar een deel van de webpagina te gaan.
+            </summary>
+            <param name="sender">De sender.</param>
+            <param name="args">De details op webpagen wordt verandert.</param>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.TimeStartTeOpslaan">
+            <summary>
+            Deze functie gaat de timer starten.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.Opgeslagen">
+            <summary>
+            Deze functie gaat de timer stoppen.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.OpslaanData(System.Object)">
+            <summary>
+            Deze functie slaat de data op.
+            </summary>
+            <param name="obj">.</param>
         </member>
         <member name="T:HenE_BlazorComponent.Program">
             <summary>
@@ -914,22 +1053,6 @@
             </summary>
             <param name="app">app.</param>
             <param name="env">env.</param>
-        </member>
-        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.TimeStartTeOpslaan">
-            <summary>
-            Deze functie gaat de timer starten.
-            </summary>
-        </member>
-        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.Opgeslagen">
-            <summary>
-            Deze functie gaat de timer stoppen.
-            </summary>
-        </member>
-        <member name="M:HenE_BlazorComponent.Pages.Formulier.FormulierInTextArea.OpslaanData(System.Object)">
-            <summary>
-            Deze functie slaat de data op.
-            </summary>
-            <param name="obj">.</param>
         </member>
     </members>
 </doc>

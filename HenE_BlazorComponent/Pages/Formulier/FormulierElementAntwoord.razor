@@ -16,6 +16,12 @@
     case SoortAntwoord.Textarea:
         <FormulierInTextArea Antwoord="formulierAntwoord"></FormulierInTextArea>
         break;
+    case SoortAntwoord.Tijd:
+        <FormulierTijdElement Antwoord="formulierAntwoord"></FormulierTijdElement>
+        break;
+    case SoortAntwoord.RadioButton:
+        <FormulierRadioButtonElement Antwoord="formulierAntwoord"></FormulierRadioButtonElement>
+        break;
     default:
         break;
 }

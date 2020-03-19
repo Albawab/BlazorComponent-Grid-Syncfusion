@@ -775,14 +775,14 @@
       "StyleCop.Analyzers/1.1.118": {
         "type": "package"
       },
-      "Syncfusion.EJ2.Blazor/17.4.0.54": {
+      "Syncfusion.EJ2.Blazor/17.4.0.55": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "3.1.2",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Localization": "2.2.0",
           "Newtonsoft.Json": "12.0.2",
-          "Syncfusion.Licensing": "17.4.0.53",
+          "Syncfusion.Licensing": "17.4.0.55",
           "System.Reflection.Emit": "4.7.0"
         },
         "compile": {
@@ -792,7 +792,7 @@
           "lib/netstandard2.1/Syncfusion.EJ2.Blazor.dll": {}
         }
       },
-      "Syncfusion.Licensing/17.4.0.53": {
+      "Syncfusion.Licensing/17.4.0.55": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.0/Syncfusion.Licensing.dll": {}
@@ -2661,23 +2661,23 @@
         "tools/uninstall.ps1"
       ]
     },
-    "Syncfusion.EJ2.Blazor/17.4.0.54": {
-      "sha512": "xGA7XXrRhBb3eG8WWkM4/lktc081OZ2Z8W6UdOW5AcidQQjaSakzrJKj8r/H1OmQNV8ZsitQA/K5O1AEyI6MNw==",
+    "Syncfusion.EJ2.Blazor/17.4.0.55": {
+      "sha512": "NIYvwrjtr3zmjGqI7T69lW8s/URRF0szCNOQTzHhXEYAAkvtRkqRyW/WIwSgsu4/j6JfPEruYHqn0tGjLmLYcw==",
       "type": "package",
-      "path": "syncfusion.ej2.blazor/17.4.0.54",
+      "path": "syncfusion.ej2.blazor/17.4.0.55",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/netstandard2.1/Syncfusion.EJ2.Blazor.dll",
         "lib/netstandard2.1/Syncfusion.EJ2.Blazor.xml",
-        "syncfusion.ej2.blazor.17.4.0.54.nupkg.sha512",
+        "syncfusion.ej2.blazor.17.4.0.55.nupkg.sha512",
         "syncfusion.ej2.blazor.nuspec"
       ]
     },
-    "Syncfusion.Licensing/17.4.0.53": {
-      "sha512": "Mp67yPrr/dg3h3WJtanMwza+j3D4vp37IEGxZ1cs2+hOEZPCgzcMlFpB2Ic1jVp586wdEvzTCPVOSk4eWJrnng==",
+    "Syncfusion.Licensing/17.4.0.55": {
+      "sha512": "OiadVAyHgL8hqsnrl4cyrhcu6pUngz/IOQqzuHe6AfF6B0CyZRGoyij+B/EsIAeQ036jgkiZ+GXxBCSdxsLgEg==",
       "type": "package",
-      "path": "syncfusion.licensing/17.4.0.53",
+      "path": "syncfusion.licensing/17.4.0.55",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -2697,7 +2697,7 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.17.4.0.53.nupkg.sha512",
+        "syncfusion.licensing.17.4.0.55.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
@@ -4648,9 +4648,10 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "HenEServer >= 1.0.0",
+      "Microsoft.AspNetCore.WebUtilities >= 2.2.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
       "StyleCop.Analyzers >= 1.1.118",
-      "Syncfusion.EJ2.Blazor >= 17.4.0.54",
+      "Syncfusion.EJ2.Blazor >= 17.4.0.55",
       "System.Text.Json >= 4.7.1"
     ]
   },
@@ -4695,6 +4696,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.WebUtilities": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.1, )"
@@ -4707,7 +4712,7 @@
           },
           "Syncfusion.EJ2.Blazor": {
             "target": "Package",
-            "version": "[17.4.0.54, )"
+            "version": "[17.4.0.55, )"
           },
           "System.Text.Json": {
             "target": "Package",
