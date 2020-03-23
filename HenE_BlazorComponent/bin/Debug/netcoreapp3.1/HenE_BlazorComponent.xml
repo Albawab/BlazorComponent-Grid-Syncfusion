@@ -17,6 +17,12 @@
             <param name="idFormulier">Het formulier die aan wordt gevraagd.</param>
             <returns>Het juist formulier.</returns>
         </member>
+        <member name="M:HenE_BlazorComponent.Controllers.FormulierController.GetFormuliers">
+            <summary>
+            Geeft eem lijst van de formuliers terug.
+            </summary>
+            <returns>Een list van de formulier.</returns>
+        </member>
         <member name="T:HenE_BlazorComponent.Data.CardButtonElement">
             <summary>
             De card butten element.
@@ -1053,6 +1059,30 @@
             </summary>
             <param name="app">app.</param>
             <param name="env">env.</param>
+        </member>
+        <member name="M:HenE_BlazorComponent.Shared.NavMenu.ToggleNavMenu">
+            <summary>
+            verandert de situatie van de slidebar.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Shared.NavMenu.ToggleDataList(HenE_BlazorComponent.Data.Formulier)">
+            <summary>
+            Toon of verstoppen de data van een formulier.
+            </summary>
+        </member>
+        <member name="M:HenE_BlazorComponent.Shared.NavMenu.GetUrl(HenE_BlazorComponent.Data.FormulierSectie,HenE_BlazorComponent.Data.Formulier)">
+            <summary>
+            Verzamelt de URL delen in een URL.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HenE_BlazorComponent.Shared.NavMenu.GetUrl(HenE_BlazorComponent.Data.Formulier)">
+            <summary>
+            Verzamelt de URL delen in een URL.
+            </summary>
+            <param name="item"></param>
+            <returns></returns>
         </member>
     </members>
 </doc>

@@ -43,8 +43,8 @@ namespace HenE_BlazorComponent
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddSingleton<HttpClient>();
             services.AddSyncfusionBlazor();
+            services.AddSingleton<HttpClient>();
             services.AddSingleton<IHaveSettings>(new InstellingenJSON(this.Configuration));
         }
 
@@ -55,6 +55,7 @@ namespace HenE_BlazorComponent
         /// <param name="env">env.</param>
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjI2NjE3QDMxMzgyZTMxMmUzMEFwaHo2SnBnNUoyWDdRaXpGM2NpS0duSWRHNE90TUFUWFlHd0tReHBFL289");
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

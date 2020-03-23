@@ -5,6 +5,7 @@
 namespace HenE_BlazorComponent.Controllers
 {
     using HenE_BlazorComponent.Data;
+    using System.Collections.Generic;
 
     /// <summary>
     /// De controller van de formulier date.
@@ -12,6 +13,7 @@ namespace HenE_BlazorComponent.Controllers
     /// </summary>
     public class FormulierController
     {
+        private readonly List<Formulier> formulieren = new List<Formulier>();
         private readonly AangifteDividendBelasting aangifteDividendBelasting = new AangifteDividendBelasting();
         private readonly AangifteSchenkbelasting aangifteSchenkbelasting = new AangifteSchenkbelasting();
         private readonly KennisgevingDouane kennisgevingDouane = new KennisgevingDouane();
@@ -30,6 +32,19 @@ namespace HenE_BlazorComponent.Controllers
                 2 => this.kennisgevingDouane,
                 _ => null,
             };
+        }
+
+        /// <summary>
+        /// Geeft eem lijst van de formuliers terug.
+        /// </summary>
+        /// <returns>Een list van de formulier.</returns>
+        public List<Formulier> GetFormuliers()
+        {
+            this.formulieren.Add(this.aangifteDividendBelasting);
+            this.formulieren.Add(this.aangifteSchenkbelasting);
+            this.formulieren.Add(this.kennisgevingDouane);
+
+            return this.formulieren;
         }
     }
 }

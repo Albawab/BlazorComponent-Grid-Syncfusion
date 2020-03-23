@@ -29,13 +29,13 @@
 <hr />
 <h2 style="color:red">Action Buttons</h2>
 <div>
-    <EjsToast @ref="ToastObj" Title="Anjolie Stokes" Width="280" Height="120" Content="@ToastContent" Icon="e-laura">
+    <SfToast @ref="ToastObj" Title="Anjolie Stokes" Width="280" Height="120" Content="@ToastContent" Icon="e-laura">
         <ToastPosition X="Right" Y="Bottom"></ToastPosition>
         <ToastButtonModelProps>
             <ToastButtonModelProp Model="@IgnoreBtnObj" Clicked="@OnIgnore"></ToastButtonModelProp>
             <ToastButtonModelProp Model="@ReplyBtnObj" Clicked="@OnIgnore"></ToastButtonModelProp>
         </ToastButtonModelProps>
-    </EjsToast>
+    </SfToast>
     <div class="col-lg-12 col-sm-12 col-md-12 center">
         <div id="toastBtnDefault" style="margin: auto; text-align: center">
             <EjsButton @onclick="@ShowOnClick"> Show Toast </EjsButton>
@@ -44,7 +44,7 @@
 </div>
 
 @code {
-        EjsToast ToastObj;
+        SfToast ToastObj;
 
     public string ToastContent { get; set;} = "Conference Room 01 / Building 135 10:00 AM-10:30 AM";
     private void ShowOnClick()

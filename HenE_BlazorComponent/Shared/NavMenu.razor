@@ -7,34 +7,42 @@
 </div>
 
 <div class="@NavMenuCssClass list-group collapse" @onclick="ToggleNavMenu">
-    <ol class="nav" style="overflow:visible">
-        <li class="nav-item">
-            <NavLink class="nav-link" @onclick="ToggleDataList" style="font-size:18px">
+    @foreach (Formulier huidigeformulier in formulieren)
+    {
+        <ol class="nav" style="overflow:visible">
 
-                <span aria-hidden="true"></span>@formulier.Titel
-            </NavLink>
-        </li>
-        @if (formulierElementenGroup != null)
-        {
-            @foreach (var sections in formulierElementenGroup)
+            <li class="nav-item">
+                <NavLink class="nav-link" @onclick="(()=>ToggleDataList(huidigeformulier))" style="font-size:18px" href="@GetUrl(huidigeformulier)">
+
+                    <span aria-hidden="true"></span>@huidigeformulier.Titel
+                </NavLink>
+            </li>
+            @if (formulier == huidigeformulier)
             {
-                @foreach (FormulierSectie section in sections)
+                @if (formulierElementenGroup != null)
                 {
-                    <li class="custom active pl-3 border-bottom list-unstyled" style="font-size:medium" @onclick="@(()=>GetHashTagName(section))">
-                        @if (section is FormulierSectie)
+                    @foreach (var sections in formulierElementenGroup)
+                    {
+                        @foreach (FormulierSectie section in sections)
                         {
-                            FormulierSectie sectie = (FormulierSectie)section;
-                            <NavLink class="nav-link" href="@GetUrl(section)" Match="NavLinkMatch.All">
-                                <span class="text-light" aria-hidden="true" style="font-size:13px">
-                                    @(sectie.Title)
-                                </span>
-                            </NavLink>
+                            <li class="custom active pl-3 border-bottom list-unstyled" style="font-size:medium">
+                                @if (section is FormulierSectie)
+                                {
+                                    FormulierSectie sectie = section as FormulierSectie;
+                                    <NavLink class="nav-link" href="@GetUrl(section,huidigeformulier)" Match="NavLinkMatch.All">
+                                        <span class="text-light" aria-hidden="true" style="font-size:13px">
+                                            @(sectie.Title)
+                                        </span>
+                                    </NavLink>
+                                }
+                            </li>
                         }
-                    </li>
+                    }
                 }
             }
-        }
-    </ol>
+        </ol>
+    }
+
     @*
         <ul class="nav flex-column">
             <li class="nav-item px-3">
@@ -126,6 +134,8 @@
     private bool collapseNavMenu = true;
     FormulierController controller = new FormulierController();
     Formulier formulier;
+    Formulier oldFormulier;
+    List<Formulier> formulieren;
     dynamic formulierElementenGroup { get; set; }
     public ExpandOnSettings Expand = ExpandOnSettings.Click;
     string HashTagName = "#0";
@@ -134,23 +144,41 @@
 
     protected override void OnInitialized()
     {
+        ///Get de controller.
         FormulierController controller = new FormulierController();
-        formulier = controller.GetData(1);
+
+        // Eerst bring de data van de eerste formulier aan.
+        //formulier = controller.GetData(0);
+
+        //oldFormulier = formulier;
+        // Eerst bring de formulieren die beschikbaar zijn.
+        formulieren = controller.GetFormuliers();
     }
 
-
+    /// <summary>
+    /// verandert de situatie van de slidebar.
+    /// </summary>
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
         StateHasChanged();
-
     }
 
-    private void ToggleDataList()
+    /// <summary>
+    /// Toon of verstoppen de data van een formulier.
+    /// </summary>
+    private void ToggleDataList(Formulier huidigeFormulier)
     {
+        if (huidigeFormulier != formulier)
+        {
+            oldFormulier = formulier;
+        }
+
+        formulier = huidigeFormulier;
         if (formulierElementenGroup == null)
         {
-
+            // bringt de element van de huidige formulier.
+            // Sorteert de element bij groepen.
             formulierElementenGroup = formulier.Kinderen.GroupBy(G => G.Row).OrderBy(O => O.Key).ToArray();
         }
         else
@@ -162,24 +190,62 @@
 
     }
 
-    private void GetHashTagName(FormulierSectie item)
-    {
-        if (item is FormulierSectie)
+
+
+    /// <summary>
+    /// Verzamelt de URL delen in een URL.
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
+    private string GetUrl(FormulierSectie sectie, Formulier huidigeFormulierVanUitNav)
+    {                int FormulierNummer = -1;
+        @foreach (Formulier huidigeFormulier in formulieren)
         {
-            FormulierSectie sectie = (FormulierSectie)item;
-            HashTagName = "#" + sectie.SectionNumber.ToString();
+            FormulierNummer++;
+            if (huidigeFormulierVanUitNav == huidigeFormulier)
+            {
+                @foreach (FormulierSectie huidigeSectie in huidigeFormulier.Kinderen)
+                {
+                    if (sectie == huidigeSectie)
+                    {
+                        return HashTagName ="/" + FormulierNummer.ToString()+ "#" + huidigeSectie.SectionNumber.ToString();
+                    }
+                }
+            }
         }
-        StateHasChanged();
+        @*if (item is FormulierSectie)
+            {
+                FormulierSectie sectie = (FormulierSectie)item;
+                HashTagName = "#" + sectie.SectionNumber.ToString();
+            }*@
+
+        return HashTagName;
+
     }
 
-    private string GetUrl(FormulierSectie item)
+    /// <summary>
+    /// Verzamelt de URL delen in een URL.
+    /// </summary>
+    /// <param name="item"></param>
+    /// <returns></returns>
+    private string GetUrl(Formulier huidigeFormulier)
     {
-        if (item is FormulierSectie)
+        int FormulierNummer = -1;
+
+        @foreach (Formulier Eenformulier in formulieren)
         {
-            FormulierSectie sectie = (FormulierSectie)item;
-            HashTagName = "#" + sectie.SectionNumber.ToString();
+            FormulierNummer++;
+            if (huidigeFormulier != oldFormulier)
+            {
+                if (huidigeFormulier == Eenformulier)
+                {
+                    oldFormulier = huidigeFormulier;
+                    return HashTagName = "/" + FormulierNummer.ToString();
+                }
+
+            }
         }
-        return HashTagName;
+        return "";
     }
 }
 
@@ -187,6 +253,6 @@
 
     .custom {
         width: 100%;
-        opacity:0.7;
+        opacity: 0.7;
     }
 </style>

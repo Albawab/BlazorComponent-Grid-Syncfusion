@@ -55,17 +55,8 @@ namespace HenE_BlazorComponent.Pages.Formulier
         /// </summary>
         protected override void OnInitialized()
         {
-            switch (this.Id)
-            {
-                case 0:
-                    this.EenFormulier = this.Controller.GetData(0);
-                    break;
-                case 1:
-                    this.EenFormulier = this.Controller.GetData(1);
-                    break;
-            }
-
-            this.FormulierElementenGroup = this.EenFormulier.Kinderen.GroupBy(g => g.Row).OrderBy(o => o.Key).ToArray();
+            this.EenFormulier = this.Controller.GetData(0);
+           /* this.FormulierElementenGroup = this.EenFormulier.Kinderen.GroupBy(g => g.Row).OrderBy(o => o.Key).ToArray();*/
             this.NavigationManager.LocationChanged += this.TryFragmentNavigation;
         }
 
@@ -77,6 +68,25 @@ namespace HenE_BlazorComponent.Pages.Formulier
         protected override async Task OnAfterRenderAsync(bool firstRender)
         {
             await this.NavigationManager.NavigateToFragmentAsync(this.JsRuntime);
+        }
+
+        protected override void OnParametersSet()
+        {
+            switch (this.Id)
+            {
+                case 0:
+                    this.EenFormulier = this.Controller.GetData(0);
+                    break;
+                case 1:
+                    this.EenFormulier = this.Controller.GetData(1);
+                    break;
+                case 2:
+                    this.EenFormulier = this.Controller.GetData(2);
+                    break;
+            }
+
+            this.FormulierElementenGroup = this.EenFormulier.Kinderen.GroupBy(g => g.Row).OrderBy(o => o.Key).ToArray();
+            StateHasChanged();
         }
 
         /// <summary>

@@ -1,7 +1,7 @@
 ﻿<div class="col-lg-9 control-section offset-2">
     <div class="content-wrapper">
         <div class="row">
-            <EjsGrid DataSource="@GridData" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" AllowPaging="true">
+            <SfGrid DataSource="@GridData" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" AllowPaging="true">
                 <GridEditSettings AllowAdding="true" AllowDeleting="true" AllowEditing="true"></GridEditSettings>
                 <GridColumns>
                     @foreach (dynamic prop in typeElement.GetProperties())
@@ -9,7 +9,7 @@
                         <GridColumn Field="@prop.Name" AllowEditing="@prop.CanWrite"></GridColumn>
                     }
                 </GridColumns>
-            </EjsGrid>
+            </SfGrid>
         </div>
     </div>
 </div>

@@ -3,7 +3,7 @@
 <hr />
 <div>
     <h2 style="color:red"></h2>
-    <EjsGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowGrouping="true" AllowFiltering="true">
+    <SfGrid DataSource="@Orders" AllowPaging="true" AllowSorting="true" AllowGrouping="true" AllowFiltering="true">
         <GridPageSettings PageSize="5"></GridPageSettings>
         <GridColumns>
             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -11,7 +11,7 @@
             <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 
 </div>
 
@@ -19,23 +19,23 @@
 <hr />
 <div>
     <h2 style="color:red">EjsDataManager URL Adaptor<span style="color:aqua"> WebApiAdaptor</span></h2>
-    <EjsGrid TValue="Order" AllowPaging="true">
+    <SfGrid TValue="Order" AllowPaging="true">
         <GridPageSettings PageSize="3"></GridPageSettings>
-        <EjsDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></EjsDataManager>
+        <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
         <GridColumns>
             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
             <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>
             <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 
 </div>
 <br />
 <hr />
 <div>
     <h2 style="color:red">Dynamic column building</h2>
-    <EjsGrid DataSource="@Orders" AllowPaging="true">
+    <SfGrid DataSource="@Orders" AllowPaging="true">
         <GridEditSettings AllowEditing="true" AllowAdding="true" AllowDeleting="true"></GridEditSettings>
         <GridPageSettings PageSize="3"></GridPageSettings>
         <GridColumns>
@@ -44,13 +44,13 @@
                 <GridColumn Field="@prop.Name" IsPrimaryKey="@(prop.Name == "OrderID")" AllowEditing="@prop.CanWrite"></GridColumn>
             }
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 </div>
 <br />
 <hr />
 <div>
     <h2 style="color:red">Photo</h2>
-    <EjsGrid DataSource="@Employees" AllowPaging="true">
+    <SfGrid DataSource="@Employees" AllowPaging="true">
         <GridPageSettings PageSize="3"></GridPageSettings>
         <GridColumns>
             <GridColumn HeaderText="Employee Image" TextAlign="TextAlign.Center" Width="120">
@@ -68,14 +68,14 @@
             <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Format="C2" Width="120"></GridColumn>
             <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Column chooser AllowReordering</h2>
-    <EjsGrid DataSource="@Employees" ShowColumnChooser="true" AllowReordering="true" Toolbar=@ToolbarItems AllowPaging="true">
+    <SfGrid DataSource="@Employees" ShowColumnChooser="true" AllowReordering="true" Toolbar=@ToolbarItems AllowPaging="true">
         <GridPageSettings PageSize="3"></GridPageSettings>
         <GridColumns>
             <GridColumn Field=@nameof(EmployeeData.EmployeeID) TextAlign="TextAlign.Center" HeaderText="Employee ID" Width="120"></GridColumn>
@@ -84,7 +84,7 @@
             <GridColumn Field=@nameof(EmployeeData.Title) HeaderText="Title" Width="120"></GridColumn>
             <GridColumn Field=@nameof(EmployeeData.HireDate) HeaderText="Hire Date" Format="d" TextAlign="TextAlign.Right" Width="150"></GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 </div>
 
 <br />
@@ -94,7 +94,7 @@
     @{
         var Tool = (new List<string>() { "Search" });
     }
-    <EjsGrid DataSource="@Orders" Toolbar=@Tool AllowPaging="true">
+    <SfGrid DataSource="@Orders" Toolbar=@Tool AllowPaging="true">
         <GridPageSettings PageSize="3"></GridPageSettings>
         <GridColumns>
             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" TextAlign="TextAlign.Right" Width="120"></GridColumn>
@@ -102,14 +102,14 @@
             <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Editing</h2>
-    <EjsGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
+    <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Cancel", "Update" })" Height="315">
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
         <GridPageSettings PageSize="4"></GridPageSettings>
         <GridColumns>
@@ -118,14 +118,14 @@
             <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" EditType="EditType.DatePickerEdit" Format="d" TextAlign="TextAlign.Right" Width="130" Type="ColumnType.Date"></GridColumn>
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Dialog</h2>
-    <EjsGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315">
+    <SfGrid DataSource="@Orders" AllowPaging="true" Toolbar="@(new List<string>() { "Add", "Edit", "Delete", "Update", "Cancel" })" Height="315">
         <GridPageSettings PageSize="4"></GridPageSettings>
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true" Mode="EditMode.Dialog"></GridEditSettings>
         <GridColumns>
@@ -135,14 +135,14 @@
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" EditType="EditType.NumericEdit" Width="120"></GridColumn>
             <GridColumn Field=@nameof(Order.ShipCountry) HeaderText="Ship Country" EditType="EditType.DropDownEdit" Width="150"></GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Command column</h2>
-    <EjsGrid DataSource="@Orders" AllowPaging="true" Height="315">
+    <SfGrid DataSource="@Orders" AllowPaging="true" Height="315">
         <GridPageSettings PageSize="4"></GridPageSettings>
         <GridEditSettings AllowAdding="true" AllowEditing="true" AllowDeleting="true"></GridEditSettings>
         <GridColumns>
@@ -159,14 +159,14 @@
                 </GridCommandColumns>
             </GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Checkbox selection</h2>
-    <EjsGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
+    <SfGrid DataSource="@Orders" AllowSelection="true" AllowPaging="true">
         <GridSelectionSettings Type="SelectionType.Multiple"></GridSelectionSettings>
         <GridPageSettings PageSize="4"></GridPageSettings>
         <GridColumns>
@@ -176,7 +176,7 @@
             <GridColumn Field=@nameof(Order.OrderDate) HeaderText=" Order Date" Format="d" Type="ColumnType.Date" TextAlign="TextAlign.Right" Width="130"></GridColumn>
             <GridColumn Field=@nameof(Order.Freight) HeaderText="Freight" Format="C2" TextAlign="TextAlign.Right" Width="120"></GridColumn>
         </GridColumns>
-    </EjsGrid>
+    </SfGrid>
 </div>
 
 @code {

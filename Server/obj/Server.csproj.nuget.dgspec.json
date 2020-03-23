@@ -38,9 +38,17 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.WebUtilities": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.1, )"
+            },
+            "Syncfusion.Blazor": {
+              "target": "Package",
+              "version": "[18.1.0.36-beta, )"
             }
           },
           "imports": [

@@ -3,16 +3,16 @@
 
 <div>
     <h2 style="color:red">Tooltip</h2>
-    <EjsTooltip ID="Tooltip" Content="@Content" Target="#btn">
-        <EjsButton ID="btn" Content="Show Tooltip"></EjsButton>
-    </EjsTooltip>
+    <SfTooltip ID="Tooltip" Content="@Content" Target="#btn">
+        <SfButton ID="btn" Content="Show Tooltip"></SfButton>
+    </SfTooltip>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Scroll mode</h2>
-    <EjsTooltip ID="tooltip" Height="60px" Width="200px" IsSticky="true" Target="#target" Content="@ContentScroll">
+    <SfTooltip ID="tooltip" Height="60px" Width="200px" IsSticky="true" Target="#target" Content="@ContentScroll">
         <div id='container'>
             <p>
                 A green home is a type of house designed to be
@@ -22,7 +22,7 @@
                 have become more prevalent we have also seen the emergence of green affordable housing.
             </p>
         </div>
-    </EjsTooltip>
+    </SfTooltip>
 </div>
 
 
@@ -31,38 +31,38 @@
 <div>
     <h2 style="color:red">Position Right</h2>
 
-    <EjsTooltip Target="#target" Content="@Content" Position="@Syncfusion.EJ2.Blazor.Popups.Position.RightCenter">
-        <EjsButton ID="target" Content="Show Tooltip"></EjsButton>
-    </EjsTooltip>
+    <SfTooltip Target="#target" Content="@Content" Position="@Syncfusion.EJ2.Blazor.Popups.Position.RightCenter">
+        <SfButton ID="target" Content="Show Tooltip"></SfButton>
+    </SfTooltip>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Mouse trailing</h2>
-    <EjsTooltip MouseTrail=true Content="@Content" Target="#target">
-     <EjsButton ID="target" Content="Show Tooltip"></EjsButton>
-</EjsTooltip>
+    <SfTooltip MouseTrail=true Content="@Content" Target="#target">
+     <SfButton ID="target" Content="Show Tooltip"></SfButton>
+</SfTooltip>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Focus</h2>
-    <EjsTooltip ID="tooltipfocus" Target=".e-info" Content="@Content" OpensOn="Focus">
+    <SfTooltip ID="tooltipfocus" Target=".e-info" Content="@Content" OpensOn="Focus">
         <e-content-template>
             <div class="blocks"><span><input class="e-info" type="text" placeholder="Focus and blur" /></span></div>
         </e-content-template>
-    </EjsTooltip>
+    </SfTooltip>
 </div>
 
 <br />
 <hr />
 <div>
     <h2 style="color:red">Open or Close tooltip with delay</h2>
-    <EjsTooltip Target="#target" Content="@Content" OpenDelay="1000" CloseDelay="1000">
-        <EjsButton ID="target" Content="Show Tooltip"></EjsButton>
-    </EjsTooltip>
+    <SfTooltip Target="#target" Content="@Content" OpenDelay="1000" CloseDelay="1000">
+        <SfButton ID="target" Content="Show Tooltip"></SfButton>
+    </SfTooltip>
 </div>
 
 @code {
