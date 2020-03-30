@@ -4,6 +4,8 @@
 
 namespace HenE_BlazorComponent
 {
+    using System.Collections.Generic;
+    using System.Globalization;
     using System.Net.Http;
     using HenE_BlazorComponent.Interface;
     using HenE_BlazorComponent.Setting;
@@ -12,7 +14,7 @@ namespace HenE_BlazorComponent
     using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.DependencyInjection;
     using Microsoft.Extensions.Hosting;
-    using Syncfusion.EJ2.Blazor;
+    using Syncfusion.Blazor;
     using static System.Net.WebRequestMethods;
 
     /// <summary>
@@ -46,6 +48,13 @@ namespace HenE_BlazorComponent
             services.AddSyncfusionBlazor();
             services.AddSingleton<HttpClient>();
             services.AddSingleton<IHaveSettings>(new InstellingenJSON(this.Configuration));
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            var supportedCultures = new List<CultureInfo> { new CultureInfo("nl"), new CultureInfo("ml") };
+            services.Configure<RequestLocalizationOptions>(options =>
+            {
+                options.DefaultRequestCulture = new Microsoft.AspNetCore.Localization.RequestCulture("nl");
+                options.SupportedUICultures = supportedCultures;
+            });
         }
 
         /// <summary>
@@ -70,7 +79,7 @@ namespace HenE_BlazorComponent
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseRequestLocalization();
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

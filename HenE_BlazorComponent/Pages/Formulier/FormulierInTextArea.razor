@@ -1,6 +1,4 @@
 ﻿@using System.Threading
-@using HenE_BlazorComponent
-@using Microsoft.Extensions.Options;
 @using HenE_BlazorComponent.Interface
 @inject IHaveSettings Settings
 
@@ -11,6 +9,7 @@
 @code {
     [Parameter]
     public FormulierAntwoord Antwoord { get; set; }
+
     private static Timer _timer;
     public string Value { get; set; }
     private int timeSaveData;
@@ -22,7 +21,7 @@
     {
         var gelezenInstellingen = Settings.GetInstellingen();
 
-        if (Int32.TryParse(Settings.GetInstellingen().TimerTextAreaDataOpslaanMS,out timeSaveData))
+        if (Int32.TryParse(Settings.GetInstellingen().TimerTextAreaDataOpslaanMS, out timeSaveData))
         {
             _timer = new Timer(OpslaanData, null, 0, timeSaveData);
         }

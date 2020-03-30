@@ -13,5 +13,6 @@ namespace HenE_BlazorComponent.Setting
         /// Gets or sets Timer van de functie.Die wordt aangeroept om de gegevens te opslaan.
         /// </summary>
         public string TimerTextAreaDataOpslaanMS { get; set; }
+        public string TimerToastTonen { get; set; }
     }
 }

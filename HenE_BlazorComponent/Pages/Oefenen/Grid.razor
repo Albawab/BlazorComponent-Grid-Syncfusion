@@ -21,7 +21,7 @@
     <h2 style="color:red">EjsDataManager URL Adaptor<span style="color:aqua"> WebApiAdaptor</span></h2>
     <SfGrid TValue="Order" AllowPaging="true">
         <GridPageSettings PageSize="3"></GridPageSettings>
-        <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Orders" Adaptor="Adaptors.WebApiAdaptor"></SfDataManager>
+        <SfDataManager Url="https://ej2services.syncfusion.com/production/web-services/api/Orders"></SfDataManager>
         <GridColumns>
             <GridColumn Field=@nameof(Order.OrderID) HeaderText="Order ID" IsPrimaryKey="true" TextAlign="TextAlign.Right" Width="120"></GridColumn>
             <GridColumn Field=@nameof(Order.CustomerID) HeaderText="Customer Name" Width="150"></GridColumn>

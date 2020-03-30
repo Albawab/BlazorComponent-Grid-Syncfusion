@@ -8,6 +8,7 @@ namespace HenE_BlazorComponent
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
     using Microsoft.JSInterop;
+    using Syncfusion.Blazor.Popups;
 
     /// <summary>
     /// Klas waar de Extensions functies staan.
@@ -30,6 +31,16 @@ namespace HenE_BlazorComponent
             }
 
             return jSRuntime.InvokeVoidAsync("blazorHelpers.scrollToFragment", uri.Fragment.Substring(1));
+        }
+
+        /// <summary>
+        /// Convert string to enumation.
+        /// </summary>
+        /// <param name="position">the enum as string.</param>
+        /// <returns>the enum.</returns>
+        public static Position ToPositionTooltip(this string position)
+        {
+            return (Position)Enum.Parse(typeof(Position), position);
         }
     }
 }

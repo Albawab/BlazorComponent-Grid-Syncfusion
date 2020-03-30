@@ -16,6 +16,8 @@ namespace HenE_BlazorComponent.Data
         /// </summary>
         public string Text { get; set; }
 
+        public FormulierTooltip Tooltip { get; set; }
+
         /// <summary>
         /// Gets or sets de antwoorden van de vraag.
         /// </summary>

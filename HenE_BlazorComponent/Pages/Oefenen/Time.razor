@@ -8,13 +8,13 @@
     <br />
     <div>
         <p>Data Dynamic value binding</p>
-        <SfTimePicker Step=13 Value="@TimeValue" Format="HH:mm" ValueChange="@onChange"></SfTimePicker>
+        <SfTimePicker Step=13 Value="@TimeValue" Format="HH:mm" ></SfTimePicker>
     </div>
     <br />
     <div>
         <p style="color:red">Strictmode</p>
         <p>range of 9:00 AM to 11:30 AM</p>
-        <SfTimePicker Step=13 Value="@TimeValue" Format="HH:mm" ValueChange="@onChange" Min="@MinVal" Max="@MaxVal" StrictMode="true"></SfTimePicker>
+        <SfTimePicker Step=13 Value="@TimeValue" Format="HH:mm"  Min="@MinVal" Max="@MaxVal" StrictMode="true"></SfTimePicker>
     </div>
 </div>
 <hr />
@@ -44,15 +44,15 @@
 </div>
 
 @code {
-    public DateTime TimeValue { get; set; } 
+    public DateTime TimeValue { get; set; }
     public DateTime MinVal { get; set; } = new DateTime(DateTime.Now.Year - 1, DateTime.Now.Month, DateTime.Now.Day, 07, 00, 00);
     public DateTime MaxVal { get; set; } = new DateTime(DateTime.Now.Year, DateTime.Now.Month, DateTime.Now.Day, 17, 00, 00);
     public DateTime Start { get; set; }
     public DateTime End { get; set; }
 
-    private void onChange(Syncfusion.EJ2.Blazor.Calendars.ChangeEventArgs args)
-    {
-        TimeValue = args.Value;
-        StateHasChanged();
-    }
+    /*    private void onChange(Syncfusion.Blazor.Calendars.ChangeEventArgs args)
+        {
+            TimeValue = args.Value;
+            StateHasChanged();
+        }*/
 }

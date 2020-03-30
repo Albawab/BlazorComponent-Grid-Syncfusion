@@ -35,6 +35,7 @@ namespace HenE_BlazorComponent.Setting
             return new Instellingen
             {
                 TimerTextAreaDataOpslaanMS = this.Configuration.GetSection("Instellingen").GetSection("TimerTextAreaDataOpslaanMS").Value,
+                TimerToastTonen = this.Configuration.GetSection("Instellingen").GetSection("TimerToastTonen").Value,
             };
         }
     }

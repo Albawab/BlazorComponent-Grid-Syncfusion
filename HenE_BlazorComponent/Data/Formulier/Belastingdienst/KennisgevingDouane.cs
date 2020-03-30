@@ -24,6 +24,8 @@ namespace HenE_BlazorComponent.Data
             elements.Add(this.AddGegevensAangifteOfBewijsstuk());
             elements.Add(this.AddRuimteVoorToelichting());
             elements.Add(this.AddOndertekening());
+            elements.Add(this.AddSectionsInsideOteherMainSection());
+            elements.Add(this.AddToast());
             this.Kinderen = elements;
         }
 
@@ -42,6 +44,7 @@ namespace HenE_BlazorComponent.Data
                 new FormulierVraag() { Row = 4, Rows = 2, Column = 1, Columns = 2, Text = "Telefoonnummer  ", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 4, Rows = 2, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
                 new FormulierVraag() { Row = 4, Rows = 2, Column = 0, Columns = 1, Text = "Faxnummer", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 4, Rows = 2, Column = 0, Columns = 4, SoortAntwoord = SoortAntwoord.Text } } },
                 new FormulierVraag() { Row = 5, Rows = 2, Column = 1, Columns = 2, Text = "EORI-nummer/ RSIN", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 5, Rows = 0, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                new FormulierTooltip() { Content = "type hier je naam", ShowTipPointer = true, Position = Enumeration.TooltipPosition.LeftBottom },
             };
             return new FormulierSectie()
             {
@@ -109,7 +112,7 @@ namespace HenE_BlazorComponent.Data
                     new FormulierAntwoord() { Row = 1, Rows = 1, Column = 0, Columns = 1, SoortAntwoord = SoortAntwoord.RadioButton, AntwoordToelichting = "Aankomst/inslag" },
                     new FormulierAntwoord() { Row = 1, Rows = 1, Column = 1, Columns = 1, SoortAntwoord = SoortAntwoord.RadioButton, AntwoordToelichting = "Vertrek/uitslag" },
                     new FormulierAntwoord() { Row = 1, Rows = 1, Column = 0, Columns = 1, SoortAntwoord = SoortAntwoord.RadioButton, AntwoordToelichting = "Onregelmatigheden" },
-                    new FormulierAntwoord() { Row = 1, Rows = 1, Column = 1, Columns = 1, SoortAntwoord = SoortAntwoord.RadioButton, AntwoordToelichting = " Breuk " },
+                    new FormulierAntwoord() { Row = 1, Rows = 1, Column = 0, Columns = 1, SoortAntwoord = SoortAntwoord.RadioButton, AntwoordToelichting = " Breuk " },
                     new FormulierAntwoord() { Row = 1, Rows = 1, Column = 1, Columns = 1, SoortAntwoord = SoortAntwoord.RadioButton, AntwoordToelichting = "Bewerkingen" },
                 },
                 },
@@ -304,6 +307,103 @@ namespace HenE_BlazorComponent.Data
                 Columns = 12,
                 Title = "Ondertekening",
                 SectionNumber = 6,
+                SectionKinderen = secties,
+            };
+        }
+
+        /// <summary>
+        /// Add een toast seaction aan het formulier.
+        /// </summary>
+        /// <returns>Een nieuwe section.</returns>
+        private FormulierElement AddToast()
+        {
+            List<FormulierElement> secties = new List<FormulierElement>()
+            {
+                new FormulierToast() { Row = 20, XPosition = Enumeration.HorizontalAlign.Right, YPosition = Enumeration.VerticalAlign.Top, Title = "Success", Content = "Prima!" },
+            };
+
+            return new FormulierSectie()
+            {
+                Row = -1,
+                SectionKinderen = secties,
+            };
+        }
+
+        /// <summary>
+        /// Voeg een secties binnen en andere hoofd sectie.
+        /// </summary>
+        /// <returns>Een nieuwe sectie.</returns>
+        private FormulierElement AddSectionsInsideOteherMainSection()
+        {
+            List<FormulierElement> secties = new List<FormulierElement>()
+            {
+                new FormulierSectie
+                {
+                Row = 1,
+                Rows = 0,
+                Column = 0,
+                Columns = 12,
+                Title = "Sectie1",
+                SectionNumber = 88,
+                SectionKinderen = new List<FormulierElement>
+                {
+                    new FormulierVraag() { Row = 1, Rows = 1, Column = 1, Columns = 2, Text = "Naam", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 1, Rows = 1, Column = 0, Columns = 8, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 2, Rows = 2, Column = 1, Columns = 2, Text = "Adres", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 2, Rows = 2, Column = 0, Columns = 8, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 3, Rows = 2, Column = 1, Columns = 2, Text = "Postcode ", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 3, Rows = 2, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 3, Rows = 2, Column = 0, Columns = 1, Text = "Plaats", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 3, Rows = 2, Column = 0, Columns = 4, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 4, Rows = 2, Column = 1, Columns = 2, Text = "Telefoonnummer  ", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 4, Rows = 2, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 4, Rows = 2, Column = 0, Columns = 1, Text = "Faxnummer", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 4, Rows = 2, Column = 0, Columns = 4, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 5, Rows = 2, Column = 1, Columns = 2, Text = "EORI-nummer/ RSIN", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 5, Rows = 0, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                },
+                },
+                new FormulierSectie
+                {
+                 Row = 2,
+                 Rows = 0,
+                 Column = 0,
+                 Columns = 12,
+                 Title = "Sectie2",
+                 SectionNumber = 98,
+                 SectionKinderen = new List<FormulierElement>
+                {
+                    new FormulierVraag() { Row = 1, Rows = 1, Column = 1, Columns = 2, Text = "Naam", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 1, Rows = 1, Column = 0, Columns = 8, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 2, Rows = 2, Column = 1, Columns = 2, Text = "Adres", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 2, Rows = 2, Column = 0, Columns = 8, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 3, Rows = 2, Column = 1, Columns = 2, Text = "Postcode ", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 3, Rows = 2, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 3, Rows = 2, Column = 0, Columns = 1, Text = "Plaats", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 3, Rows = 2, Column = 0, Columns = 4, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 4, Rows = 2, Column = 1, Columns = 2, Text = "Telefoonnummer  ", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 4, Rows = 2, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 4, Rows = 2, Column = 0, Columns = 1, Text = "Faxnummer", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 4, Rows = 2, Column = 0, Columns = 4, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 5, Rows = 2, Column = 1, Columns = 2, Text = "EORI-nummer/ RSIN", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 5, Rows = 0, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                },
+                },
+                new FormulierSectie
+                {
+                Row = 3,
+                Rows = 0,
+                Column = 0,
+                Columns = 12,
+                Title = "Sectie3",
+                SectionNumber = 108,
+                SectionKinderen = new List<FormulierElement>
+                {
+                    new FormulierVraag() { Row = 1, Rows = 1, Column = 1, Columns = 2, Text = "Naam", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 1, Rows = 1, Column = 0, Columns = 8, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 2, Rows = 2, Column = 1, Columns = 2, Text = "Adres", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 2, Rows = 2, Column = 0, Columns = 8, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 3, Rows = 2, Column = 1, Columns = 2, Text = "Postcode ", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 3, Rows = 2, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 3, Rows = 2, Column = 0, Columns = 1, Text = "Plaats", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 3, Rows = 2, Column = 0, Columns = 4, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 4, Rows = 2, Column = 1, Columns = 2, Text = "Telefoonnummer  ", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 4, Rows = 2, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 4, Rows = 2, Column = 0, Columns = 1, Text = "Faxnummer", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 4, Rows = 2, Column = 0, Columns = 4, SoortAntwoord = SoortAntwoord.Text } } },
+                    new FormulierVraag() { Row = 5, Rows = 2, Column = 1, Columns = 2, Text = "EORI-nummer/ RSIN", Antwoorden = new List<FormulierAntwoord>() { new FormulierAntwoord() { Row = 5, Rows = 0, Column = 0, Columns = 3, SoortAntwoord = SoortAntwoord.Text } } },
+                },
+                },
+            };
+
+            return new FormulierSectie()
+            {
+                Row = 7,
+                Rows = 0,
+                Column = 0,
+                Columns = 12,
+                Title = "Secties",
+                SectionNumber = 7,
                 SectionKinderen = secties,
             };
         }

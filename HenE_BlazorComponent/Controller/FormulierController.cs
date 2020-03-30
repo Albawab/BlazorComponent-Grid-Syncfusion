@@ -4,8 +4,8 @@
 
 namespace HenE_BlazorComponent.Controllers
 {
-    using HenE_BlazorComponent.Data;
     using System.Collections.Generic;
+    using HenE_BlazorComponent.Data;
 
     /// <summary>
     /// De controller van de formulier date.

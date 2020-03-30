@@ -16,6 +16,6 @@ namespace HenE_BlazorComponent.Interface
         /// Get de instellingen.
         /// </summary>
         /// <returns>De instellingen.</returns>
-         public Instellingen GetInstellingen();
+        public Instellingen GetInstellingen();
     }
 }

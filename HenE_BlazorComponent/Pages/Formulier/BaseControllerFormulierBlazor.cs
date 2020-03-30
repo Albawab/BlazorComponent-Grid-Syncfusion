@@ -56,7 +56,6 @@ namespace HenE_BlazorComponent.Pages.Formulier
         protected override void OnInitialized()
         {
             this.EenFormulier = this.Controller.GetData(0);
-           /* this.FormulierElementenGroup = this.EenFormulier.Kinderen.GroupBy(g => g.Row).OrderBy(o => o.Key).ToArray();*/
             this.NavigationManager.LocationChanged += this.TryFragmentNavigation;
         }
 
@@ -70,6 +69,9 @@ namespace HenE_BlazorComponent.Pages.Formulier
             await this.NavigationManager.NavigateToFragmentAsync(this.JsRuntime);
         }
 
+        /// <summary>
+        /// On de parameter heeft een nieuwe value gekeren dan werkt deze method.
+        /// </summary>
         protected override void OnParametersSet()
         {
             switch (this.Id)
@@ -86,7 +88,7 @@ namespace HenE_BlazorComponent.Pages.Formulier
             }
 
             this.FormulierElementenGroup = this.EenFormulier.Kinderen.GroupBy(g => g.Row).OrderBy(o => o.Key).ToArray();
-            StateHasChanged();
+            this.StateHasChanged();
         }
 
         /// <summary>
@@ -97,6 +99,7 @@ namespace HenE_BlazorComponent.Pages.Formulier
         private async void TryFragmentNavigation(object sender, LocationChangedEventArgs args)
         {
             await this.NavigationManager.NavigateToFragmentAsync(this.JsRuntime);
+            this.StateHasChanged();
         }
     }
 }
