@@ -5,12 +5,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.164">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Syncfusion.Blazor" Version="18.1.0.36-beta" />
-    <PackageReference Include="System.Text.Json" Version="5.0.0-preview.1.20120.5" />
+    <PackageReference Include="Syncfusion.Blazor" Version="18.1.0.42" />
+    <PackageReference Include="System.Text.Json" Version="5.0.0-preview.2.20160.6" />
   </ItemGroup>
 
 </Project>

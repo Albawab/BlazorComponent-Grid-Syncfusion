@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\HenE_BlazorComponent\\HenE_BlazorComponent.csproj": {}
+    "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\Editity Framework\\Editity Framework.csproj": {}
   },
   "projects": {
-    "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\HenE_BlazorComponent\\HenE_BlazorComponent.csproj": {
+    "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\Editity Framework\\Editity Framework.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\HenE_BlazorComponent\\HenE_BlazorComponent.csproj",
-        "projectName": "HenE_BlazorComponent",
-        "projectPath": "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\HenE_BlazorComponent\\HenE_BlazorComponent.csproj",
+        "projectUniqueName": "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\Editity Framework\\Editity Framework.csproj",
+        "projectName": "Editity Framework",
+        "projectPath": "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\Editity Framework\\Editity Framework.csproj",
         "packagesPath": "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\HenE_BlazorComponent\\obj\\",
+        "outputPath": "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\Editity Framework\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,19 +41,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "StyleCop.Analyzers": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[1.2.0-beta.164, )"
-            },
-            "Syncfusion.Blazor": {
-              "target": "Package",
-              "version": "[18.1.0.42, )"
-            },
-            "System.Text.Json": {
-              "target": "Package",
-              "version": "[5.0.0-preview.2.20160.6, )"
+              "version": "[5.0.0-preview.2.20159.4, )"
             }
           },
           "imports": [
@@ -67,9 +57,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

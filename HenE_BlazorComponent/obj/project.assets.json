@@ -156,6 +156,15 @@
           "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.dll": {}
         }
       },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/3.1.2": {
         "type": "package",
         "dependencies": {
@@ -269,17 +278,24 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
-      "StyleCop.Analyzers/1.1.118": {
+      "StyleCop.Analyzers/1.2.0-beta.164": {
+        "type": "package",
+        "dependencies": {
+          "StyleCop.Analyzers.Unstable": "1.2.0.164"
+        }
+      },
+      "StyleCop.Analyzers.Unstable/1.2.0.164": {
         "type": "package"
       },
-      "Syncfusion.Blazor/18.1.0.36-beta": {
+      "Syncfusion.Blazor/18.1.0.42": {
         "type": "package",
         "dependencies": {
           "Microsoft.AspNetCore.Components.Web": "3.1.2",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.AspNetCore.Localization": "2.2.0",
+          "Microsoft.CSharp": "4.5.0",
           "Newtonsoft.Json": "12.0.1",
-          "Syncfusion.Licensing": "18.1.0.36-beta",
+          "Syncfusion.Licensing": "18.1.0.42",
           "System.Reflection.Emit": "4.7.0"
         },
         "compile": {
@@ -287,6 +303,11 @@
         },
         "runtime": {
           "lib/netstandard2.1/Syncfusion.Blazor.dll": {}
+        },
+        "resource": {
+          "lib/netstandard2.1/en-US/Syncfusion.Blazor.resources.dll": {
+            "locale": "en-US"
+          }
         },
         "contentFiles": {
           "contentFiles/any/netstandard2.1/Nuget.Config": {
@@ -302,7 +323,7 @@
           "buildMultiTargeting/Syncfusion.Blazor.props": {}
         }
       },
-      "Syncfusion.Licensing/18.1.0.36-beta": {
+      "Syncfusion.Licensing/18.1.0.42": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.0/Syncfusion.Licensing.dll": {}
@@ -329,7 +350,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/5.0.0-preview.1.20120.5": {
+      "System.Runtime.CompilerServices.Unsafe/5.0.0-preview.2.20160.6": {
         "type": "package",
         "compile": {
           "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll": {}
@@ -338,7 +359,7 @@
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
       },
-      "System.Text.Encodings.Web/5.0.0-preview.1.20120.5": {
+      "System.Text.Encodings.Web/5.0.0-preview.2.20160.6": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.0/System.Text.Encodings.Web.dll": {}
@@ -347,11 +368,11 @@
           "lib/netcoreapp3.0/System.Text.Encodings.Web.dll": {}
         }
       },
-      "System.Text.Json/5.0.0-preview.1.20120.5": {
+      "System.Text.Json/5.0.0-preview.2.20160.6": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "5.0.0-preview.1.20120.5",
-          "System.Text.Encodings.Web": "5.0.0-preview.1.20120.5"
+          "System.Runtime.CompilerServices.Unsafe": "5.0.0-preview.2.20160.6",
+          "System.Text.Encodings.Web": "5.0.0-preview.2.20160.6"
         },
         "compile": {
           "lib/netcoreapp3.0/System.Text.Json.dll": {}
@@ -537,6 +558,74 @@
         "lib/netstandard2.0/Microsoft.AspNetCore.WebUtilities.xml",
         "microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
         "microsoft.aspnetcore.webutilities.nuspec"
+      ]
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "type": "package",
+      "path": "microsoft.csharp/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "Microsoft.Extensions.DependencyInjection/3.1.2": {
@@ -726,10 +815,23 @@
         "newtonsoft.json.nuspec"
       ]
     },
-    "StyleCop.Analyzers/1.1.118": {
-      "sha512": "Onx6ovGSqXSK07n/0eM3ZusiNdB6cIlJdabQhWGgJp3Vooy9AaLS/tigeybOJAobqbtggTamoWndz72JscZBvw==",
+    "StyleCop.Analyzers/1.2.0-beta.164": {
+      "sha512": "IWMH8RyJGDu8ZrYFKIwjfcuXizpJnjnMGE8tDRnZ36AIAQeFDjeUPH2EUEMwj4+63oQBu/KkzRe9clSW9s5mdA==",
       "type": "package",
-      "path": "stylecop.analyzers/1.1.118",
+      "path": "stylecop.analyzers/1.2.0-beta.164",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "THIRD-PARTY-NOTICES.txt",
+        "stylecop.analyzers.1.2.0-beta.164.nupkg.sha512",
+        "stylecop.analyzers.nuspec"
+      ]
+    },
+    "StyleCop.Analyzers.Unstable/1.2.0.164": {
+      "sha512": "3WJ5JvRP9QjdrwspeLFjwD2AZw2CcDmYLQ7x8oofxvOzXvboZdFlPsSV8h56hLyK0lnMFvtpb48nxz7oQ4RgCQ==",
+      "type": "package",
+      "path": "stylecop.analyzers.unstable/1.2.0.164",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
@@ -745,16 +847,17 @@
         "analyzers/dotnet/cs/pl-PL/StyleCop.Analyzers.resources.dll",
         "analyzers/dotnet/cs/pt-BR/StyleCop.Analyzers.resources.dll",
         "analyzers/dotnet/cs/ru-RU/StyleCop.Analyzers.resources.dll",
-        "stylecop.analyzers.1.1.118.nupkg.sha512",
-        "stylecop.analyzers.nuspec",
+        "rulesets/StyleCopAnalyzersDefault.ruleset",
+        "stylecop.analyzers.unstable.1.2.0.164.nupkg.sha512",
+        "stylecop.analyzers.unstable.nuspec",
         "tools/install.ps1",
         "tools/uninstall.ps1"
       ]
     },
-    "Syncfusion.Blazor/18.1.0.36-beta": {
-      "sha512": "oxLfSV5LBUGtzmcUbok+5WDz53ebppqgR72TWBA53+9vyhEmdQjcdBMja4TiJPm6aPaHpbv2817x+qRgfRgMQw==",
+    "Syncfusion.Blazor/18.1.0.42": {
+      "sha512": "4jrgHQN/1GY7GPMZrSVZKwVzg0NSkn1dKOtvhJxtXxnaQ83HBnIL7zpBVrJG2mLuIR4ZyzAPkndPnpF4YTcqww==",
       "type": "package",
-      "path": "syncfusion.blazor/18.1.0.36-beta",
+      "path": "syncfusion.blazor/18.1.0.42",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -766,59 +869,60 @@
         "contentFiles/any/netstandard2.1/Nuget.Config",
         "lib/netstandard2.1/Syncfusion.Blazor.dll",
         "lib/netstandard2.1/Syncfusion.Blazor.xml",
-        "staticwebassets/scripts/barcodegenerator-3452e3.min.js",
-        "staticwebassets/scripts/buttons-3452e3.min.js",
-        "staticwebassets/scripts/calendars-3452e3.min.js",
-        "staticwebassets/scripts/charts-3452e3.min.js",
-        "staticwebassets/scripts/circulargauge-3452e3.min.js",
-        "staticwebassets/scripts/compression-3452e3.min.js",
-        "staticwebassets/scripts/data-3452e3.min.js",
-        "staticwebassets/scripts/diagrams-3452e3.min.js",
-        "staticwebassets/scripts/documenteditor-3452e3.min.js",
-        "staticwebassets/scripts/drawings-3452e3.min.js",
-        "staticwebassets/scripts/dropdowns-3452e3.min.js",
-        "staticwebassets/scripts/excelexport-3452e3.min.js",
-        "staticwebassets/scripts/filemanager-3452e3.min.js",
-        "staticwebassets/scripts/fileutils-3452e3.min.js",
-        "staticwebassets/scripts/gantt-3452e3.min.js",
-        "staticwebassets/scripts/grids-3452e3.min.js",
-        "staticwebassets/scripts/heatmap-3452e3.min.js",
-        "staticwebassets/scripts/inplaceeditor-3452e3.min.js",
-        "staticwebassets/scripts/inputs-3452e3.min.js",
-        "staticwebassets/scripts/kanban-3452e3.min.js",
-        "staticwebassets/scripts/layouts-3452e3.min.js",
-        "staticwebassets/scripts/lineargauge-3452e3.min.js",
-        "staticwebassets/scripts/lists-3452e3.min.js",
-        "staticwebassets/scripts/maps-3452e3.min.js",
-        "staticwebassets/scripts/navigations-3452e3.min.js",
-        "staticwebassets/scripts/notifications-3452e3.min.js",
-        "staticwebassets/scripts/officechart-3452e3.min.js",
-        "staticwebassets/scripts/pdfexport-3452e3.min.js",
-        "staticwebassets/scripts/pdfviewer-3452e3.min.js",
-        "staticwebassets/scripts/pivotview-3452e3.min.js",
-        "staticwebassets/scripts/popups-3452e3.min.js",
-        "staticwebassets/scripts/progressbar-3452e3.min.js",
-        "staticwebassets/scripts/querybuilder-3452e3.min.js",
-        "staticwebassets/scripts/richtexteditor-3452e3.min.js",
-        "staticwebassets/scripts/schedule-3452e3.min.js",
-        "staticwebassets/scripts/splitbuttons-3452e3.min.js",
-        "staticwebassets/scripts/svgbase-3452e3.min.js",
+        "lib/netstandard2.1/en-US/Syncfusion.Blazor.resources.dll",
+        "staticwebassets/scripts/barcodegenerator-ec5227.min.js",
+        "staticwebassets/scripts/buttons-ec5227.min.js",
+        "staticwebassets/scripts/calendars-ec5227.min.js",
+        "staticwebassets/scripts/charts-ec5227.min.js",
+        "staticwebassets/scripts/circulargauge-ec5227.min.js",
+        "staticwebassets/scripts/compression-ec5227.min.js",
+        "staticwebassets/scripts/data-ec5227.min.js",
+        "staticwebassets/scripts/diagrams-ec5227.min.js",
+        "staticwebassets/scripts/documenteditor-ec5227.min.js",
+        "staticwebassets/scripts/drawings-ec5227.min.js",
+        "staticwebassets/scripts/dropdowns-ec5227.min.js",
+        "staticwebassets/scripts/excelexport-ec5227.min.js",
+        "staticwebassets/scripts/filemanager-ec5227.min.js",
+        "staticwebassets/scripts/fileutils-ec5227.min.js",
+        "staticwebassets/scripts/gantt-ec5227.min.js",
+        "staticwebassets/scripts/grids-ec5227.min.js",
+        "staticwebassets/scripts/heatmap-ec5227.min.js",
+        "staticwebassets/scripts/inplaceeditor-ec5227.min.js",
+        "staticwebassets/scripts/inputs-ec5227.min.js",
+        "staticwebassets/scripts/kanban-ec5227.min.js",
+        "staticwebassets/scripts/layouts-ec5227.min.js",
+        "staticwebassets/scripts/lineargauge-ec5227.min.js",
+        "staticwebassets/scripts/lists-ec5227.min.js",
+        "staticwebassets/scripts/maps-ec5227.min.js",
+        "staticwebassets/scripts/navigations-ec5227.min.js",
+        "staticwebassets/scripts/notifications-ec5227.min.js",
+        "staticwebassets/scripts/officechart-ec5227.min.js",
+        "staticwebassets/scripts/pdfexport-ec5227.min.js",
+        "staticwebassets/scripts/pdfviewer-ec5227.min.js",
+        "staticwebassets/scripts/pivotview-ec5227.min.js",
+        "staticwebassets/scripts/popups-ec5227.min.js",
+        "staticwebassets/scripts/progressbar-ec5227.min.js",
+        "staticwebassets/scripts/querybuilder-ec5227.min.js",
+        "staticwebassets/scripts/richtexteditor-ec5227.min.js",
+        "staticwebassets/scripts/schedule-ec5227.min.js",
+        "staticwebassets/scripts/splitbuttons-ec5227.min.js",
+        "staticwebassets/scripts/svgbase-ec5227.min.js",
         "staticwebassets/scripts/syncfusion-blazor.min.js",
-        "staticwebassets/scripts/treegrid-3452e3.min.js",
-        "staticwebassets/scripts/treemap-3452e3.min.js",
+        "staticwebassets/scripts/treegrid-ec5227.min.js",
+        "staticwebassets/scripts/treemap-ec5227.min.js",
         "staticwebassets/styles/bootstrap.css",
         "staticwebassets/styles/bootstrap4.css",
         "staticwebassets/styles/fabric.css",
         "staticwebassets/styles/highcontrast.css",
         "staticwebassets/styles/material.css",
-        "syncfusion.blazor.18.1.0.36-beta.nupkg.sha512",
+        "syncfusion.blazor.18.1.0.42.nupkg.sha512",
         "syncfusion.blazor.nuspec"
       ]
     },
-    "Syncfusion.Licensing/18.1.0.36-beta": {
-      "sha512": "DJZTknlqx88FY8u91ibiZYXJHNaE0X5J/FTMCM4EPSP9D4TnJTjSQICHJJG2WxTYY4TRyC1f0jONcoUuDBDmdg==",
+    "Syncfusion.Licensing/18.1.0.42": {
+      "sha512": "9gKWFeJaL+0lt0Yvf3Nj+xCZd0DKNdLLJFviWL4LBwtDvRzHKXNs5TkDx4TYFXtlzCjGHmmj3Y3GTGLLB3Y6BQ==",
       "type": "package",
-      "path": "syncfusion.licensing/18.1.0.36-beta",
+      "path": "syncfusion.licensing/18.1.0.42",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -838,7 +942,7 @@
         "lib/netstandard2.0/Syncfusion.Licensing.dll",
         "lib/portable-win+net45+wp80+win81+wpa81/Syncfusion.Licensing.dll",
         "lib/uap10.0/Syncfusion.Licensing.dll",
-        "syncfusion.licensing.18.1.0.36-beta.nupkg.sha512",
+        "syncfusion.licensing.18.1.0.42.nupkg.sha512",
         "syncfusion.licensing.nuspec"
       ]
     },
@@ -925,10 +1029,10 @@
         "version.txt"
       ]
     },
-    "System.Runtime.CompilerServices.Unsafe/5.0.0-preview.1.20120.5": {
-      "sha512": "vAVVRGUm4plmUFqwuXZ9OzfmYU6CEOlD7W4PlOs1wPyWj3JDi00rb9KK9cS/jwsoSmZEzzE6PG74JyYa88w4kg==",
+    "System.Runtime.CompilerServices.Unsafe/5.0.0-preview.2.20160.6": {
+      "sha512": "wZAKKvdMSgxyDKMDE2cAdRULqdREhx4N6k539XeS4h8vnnrSQSBMs+FJKyqoYp+mcTbQldWaf/0ucKUIbw3MYg==",
       "type": "package",
-      "path": "system.runtime.compilerservices.unsafe/5.0.0-preview.1.20120.5",
+      "path": "system.runtime.compilerservices.unsafe/5.0.0-preview.2.20160.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -949,16 +1053,16 @@
         "ref/netstandard2.0/System.Runtime.CompilerServices.Unsafe.xml",
         "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.dll",
         "ref/netstandard2.1/System.Runtime.CompilerServices.Unsafe.xml",
-        "system.runtime.compilerservices.unsafe.5.0.0-preview.1.20120.5.nupkg.sha512",
+        "system.runtime.compilerservices.unsafe.5.0.0-preview.2.20160.6.nupkg.sha512",
         "system.runtime.compilerservices.unsafe.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "System.Text.Encodings.Web/5.0.0-preview.1.20120.5": {
-      "sha512": "1DAmQqs0V939ycZZzM7ZwWdlPCEa/JRYdFTBPWDIV6YJKVbq7ob8v51gYgpec/MBq0H9KCgfkrlzwh2k/4t8yw==",
+    "System.Text.Encodings.Web/5.0.0-preview.2.20160.6": {
+      "sha512": "j/cEPGjOW5nnrlC60r4LBQlHXMVXuR3YSNiHM3wY4lBHU8dA0kbnuFD7rRqfmuB8GTgKMME4aWOrbZjCp4I/uQ==",
       "type": "package",
-      "path": "system.text.encodings.web/5.0.0-preview.1.20120.5",
+      "path": "system.text.encodings.web/5.0.0-preview.2.20160.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -973,16 +1077,16 @@
         "lib/netstandard2.0/System.Text.Encodings.Web.xml",
         "lib/netstandard2.1/System.Text.Encodings.Web.dll",
         "lib/netstandard2.1/System.Text.Encodings.Web.xml",
-        "system.text.encodings.web.5.0.0-preview.1.20120.5.nupkg.sha512",
+        "system.text.encodings.web.5.0.0-preview.2.20160.6.nupkg.sha512",
         "system.text.encodings.web.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
     },
-    "System.Text.Json/5.0.0-preview.1.20120.5": {
-      "sha512": "BN4bp1Z7odc7w+ZDbHVnpjqDEIOvr0q8mYO/wDWoqTErqlr3UZ0aYijmlb++DfnRP+IGRagKPIsOZzBZuZh21A==",
+    "System.Text.Json/5.0.0-preview.2.20160.6": {
+      "sha512": "mrVE26agSOY8ETxwgyRUKpe5n+o4y9MocQXI+dqh2CdpjFBNiRuG5Oywlqp3L/8Fw7RDr4XMolpG0TlXwDFUmg==",
       "type": "package",
-      "path": "system.text.json/5.0.0-preview.1.20120.5",
+      "path": "system.text.json/5.0.0-preview.2.20160.6",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -995,7 +1099,7 @@
         "lib/netcoreapp3.0/System.Text.Json.xml",
         "lib/netstandard2.0/System.Text.Json.dll",
         "lib/netstandard2.0/System.Text.Json.xml",
-        "system.text.json.5.0.0-preview.1.20120.5.nupkg.sha512",
+        "system.text.json.5.0.0-preview.2.20160.6.nupkg.sha512",
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
@@ -1004,9 +1108,9 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "StyleCop.Analyzers >= 1.1.118",
-      "Syncfusion.Blazor >= 18.1.0.36-beta",
-      "System.Text.Json >= 5.0.0-preview.1.20120.5"
+      "StyleCop.Analyzers >= 1.2.0-beta.164",
+      "Syncfusion.Blazor >= 18.1.0.42",
+      "System.Text.Json >= 5.0.0-preview.2.20160.6"
     ]
   },
   "packageFolders": {
@@ -1054,15 +1158,15 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[1.1.118, )"
+            "version": "[1.2.0-beta.164, )"
           },
           "Syncfusion.Blazor": {
             "target": "Package",
-            "version": "[18.1.0.36-beta, )"
+            "version": "[18.1.0.42, )"
           },
           "System.Text.Json": {
             "target": "Package",
-            "version": "[5.0.0-preview.1.20120.5, )"
+            "version": "[5.0.0-preview.2.20160.6, )"
           }
         },
         "imports": [

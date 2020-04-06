@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "eHgyh5RHt4dTFXyX2IWyzIEqcBxbuXRijBWzOJ8FeT83in2gctGRxicz9NIrtxhYRgsQbKp9calSmcUaRVj7tg==",
+  "dgSpecHash": "e54K8Ohsq+0/9I3vsWkRd4Wfc1tuz/JwZI8JqVnJJeKn3C31vr8PNUF6LElLG+qq7LoGJk4Q3LVnME5aXEdrZg==",
   "success": true,
   "projectFilePath": "C:\\Users\\AbdulAbdulbawab\\Desktop\\Sharp\\00 Blazor\\04 BlazorComponent\\HenE_BlazorComponent\\HenE_BlazorComponent.csproj",
   "expectedPackageFiles": [
@@ -16,6 +16,7 @@
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.aspnetcore.localization\\2.2.0\\microsoft.aspnetcore.localization.2.2.0.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.aspnetcore.metadata\\3.1.2\\microsoft.aspnetcore.metadata.3.1.2.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.aspnetcore.webutilities\\2.2.0\\microsoft.aspnetcore.webutilities.2.2.0.nupkg.sha512",
+    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.2\\microsoft.extensions.dependencyinjection.3.1.2.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.2\\microsoft.extensions.dependencyinjection.abstractions.3.1.2.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\2.2.0\\microsoft.extensions.fileproviders.abstractions.2.2.0.nupkg.sha512",
@@ -27,14 +28,15 @@
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.jsinterop\\3.1.2\\microsoft.jsinterop.3.1.2.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\microsoft.net.http.headers\\2.2.0\\microsoft.net.http.headers.2.2.0.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
-    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\stylecop.analyzers\\1.1.118\\stylecop.analyzers.1.1.118.nupkg.sha512",
-    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\syncfusion.blazor\\18.1.0.36-beta\\syncfusion.blazor.18.1.0.36-beta.nupkg.sha512",
-    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\syncfusion.licensing\\18.1.0.36-beta\\syncfusion.licensing.18.1.0.36-beta.nupkg.sha512",
+    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.164\\stylecop.analyzers.1.2.0-beta.164.nupkg.sha512",
+    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.164\\stylecop.analyzers.unstable.1.2.0.164.nupkg.sha512",
+    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\syncfusion.blazor\\18.1.0.42\\syncfusion.blazor.18.1.0.42.nupkg.sha512",
+    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\syncfusion.licensing\\18.1.0.42\\syncfusion.licensing.18.1.0.42.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\system.buffers\\4.5.0\\system.buffers.4.5.0.nupkg.sha512",
     "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\system.reflection.emit\\4.7.0\\system.reflection.emit.4.7.0.nupkg.sha512",
-    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0-preview.1.20120.5\\system.runtime.compilerservices.unsafe.5.0.0-preview.1.20120.5.nupkg.sha512",
-    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\system.text.encodings.web\\5.0.0-preview.1.20120.5\\system.text.encodings.web.5.0.0-preview.1.20120.5.nupkg.sha512",
-    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\system.text.json\\5.0.0-preview.1.20120.5\\system.text.json.5.0.0-preview.1.20120.5.nupkg.sha512"
+    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0-preview.2.20160.6\\system.runtime.compilerservices.unsafe.5.0.0-preview.2.20160.6.nupkg.sha512",
+    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\system.text.encodings.web\\5.0.0-preview.2.20160.6\\system.text.encodings.web.5.0.0-preview.2.20160.6.nupkg.sha512",
+    "C:\\Users\\AbdulAbdulbawab\\.nuget\\packages\\system.text.json\\5.0.0-preview.2.20160.6\\system.text.json.5.0.0-preview.2.20160.6.nupkg.sha512"
   ],
   "logs": []
 }
