@@ -22,7 +22,7 @@ namespace Editity_Framework.Models
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
-            builder.Entity<Student>().HasKey(H=> new { H.id,H.idRk});
+            builder.Entity<Student>().HasKey(H => new { H.id, H.idRk });
         }
     }
 }

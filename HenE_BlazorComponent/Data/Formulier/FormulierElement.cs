@@ -10,6 +10,11 @@ namespace HenE_BlazorComponent.Data
     public class FormulierElement
     {
         /// <summary>
+        /// Gets or sets the id of elemets.
+        /// </summary>
+        public int id { get; set; }
+
+        /// <summary>
         /// Gets or sets de rij van de element.
         /// </summary>
         public int Row { get; set; }

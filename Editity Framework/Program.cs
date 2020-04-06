@@ -15,6 +15,7 @@ namespace Editity_Framework
                     new Student() { id = 0, idRk = 6, naam = "Joris", adress = new StudentAdress() { Id = 0, HuisNummer = 40, Postcode = "2402cz", Straat = "Keizershof", WoonPlats = "Alphen" } } };
             using (var db = new Models.TestdbContext())
             {
+                db.Database.EnsureCreated();
                 using (var Trans = db.Database.BeginTransaction())
                 {
                     try
@@ -46,7 +47,7 @@ namespace Editity_Framework
                         // Lazy
                         Console.WriteLine("Lazy");
                         var a = db.Students;
-                       
+
                         Console.WriteLine();
                         Console.WriteLine("Delete");
                         Console.WriteLine();
